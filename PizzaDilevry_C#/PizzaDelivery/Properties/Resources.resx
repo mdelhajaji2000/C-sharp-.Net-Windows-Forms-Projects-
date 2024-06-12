@@ -121,6 +121,9 @@
   <data name="003-delivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\003-delivery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="004-pizza-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\004-pizza-icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="005-pizza-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\005-pizza-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -129,5 +132,8 @@
   </data>
   <data name="pizza-deliver" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pizza-deliver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

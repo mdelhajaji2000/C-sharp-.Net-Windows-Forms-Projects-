@@ -143,5 +143,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-pizza-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+    <Content Include="Resources\Discount_Codes.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

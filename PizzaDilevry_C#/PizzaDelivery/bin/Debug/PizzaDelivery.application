@@ -14,14 +14,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="PizzaDelivery.exe.manifest" size="3487">
+    <dependentAssembly dependencyType="install" codebase="PizzaDelivery.exe.manifest" size="3891">
       <assemblyIdentity name="PizzaDelivery.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7CQAcVeZc/zFL/k8/3o4rAzyAcE1EYVPmyUUExkxZyg=</dsig:DigestValue>
+        <dsig:DigestValue>TfRDUVXUtywQDMCaH6xo7L36GIb8m91Djw0UA6+cNg0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
