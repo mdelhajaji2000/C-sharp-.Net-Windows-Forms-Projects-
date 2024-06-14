@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory />
+    <PublishUrlHistory>C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\PizzaDilevry_C#\PzzaSetup\|C:\Users\mdelh\OneDrive\Desktop\pizzaSetupFile\|C:\Users\mdelh\OneDrive\Desktop\|C:\Users\mdelh\OneDrive\Desktop\app\</PublishUrlHistory>
     <InstallUrlHistory />
     <SupportUrlHistory />
-    <UpdateUrlHistory />
+    <UpdateUrlHistory>http://localhost/PizzaDelivery/</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>
@@ -12,5 +12,12 @@
   </PropertyGroup>
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>
+    </ReferencePath>
   </PropertyGroup>
 </Project>

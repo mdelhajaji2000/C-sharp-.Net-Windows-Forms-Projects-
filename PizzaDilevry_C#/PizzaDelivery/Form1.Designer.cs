@@ -42,6 +42,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.CB_PizzaType = new System.Windows.Forms.ComboBox();
+            this.Discount_Message = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.numericUpDown_Count = new System.Windows.Forms.NumericUpDown();
@@ -55,7 +56,8 @@
             this.Dispaly_TOTAle_Price = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.order_Summary = new System.Windows.Forms.GroupBox();
-            this.Discount_Message = new System.Windows.Forms.Label();
+            this.Display_Count = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.Display_Discountvalue = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.Display_PizzaType = new System.Windows.Forms.Label();
@@ -74,7 +76,7 @@
             this.BT_Take_Out = new System.Windows.Forms.RadioButton();
             this.BT_EAt_In = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.AddedPriceLable = new System.Windows.Forms.Label();
+            this.Display_Totale_Toppings = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.BT_Green_Papper = new System.Windows.Forms.CheckBox();
             this.BT_Tomatos = new System.Windows.Forms.CheckBox();
@@ -90,8 +92,6 @@
             this.BT_Pizza_Meduim = new System.Windows.Forms.RadioButton();
             this.BT_Size_Larg = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.Display_Count = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.Start_Panel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -286,6 +286,17 @@
             this.CB_PizzaType.TabIndex = 23;
             this.CB_PizzaType.SelectedIndexChanged += new System.EventHandler(this.CB_PizzaType_SelectedIndexChanged);
             // 
+            // Discount_Message
+            // 
+            this.Discount_Message.Font = new System.Drawing.Font("Segoe UI Historic", 7F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Discount_Message.ForeColor = System.Drawing.Color.Red;
+            this.Discount_Message.Location = new System.Drawing.Point(507, 543);
+            this.Discount_Message.Name = "Discount_Message";
+            this.Discount_Message.Size = new System.Drawing.Size(201, 13);
+            this.Discount_Message.TabIndex = 29;
+            this.Discount_Message.Text = "The Discount Code Is Not Valable !!!";
+            this.Discount_Message.Visible = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -455,16 +466,24 @@
             this.order_Summary.TabStop = false;
             this.order_Summary.Text = "Order Summary : ";
             // 
-            // Discount_Message
+            // Display_Count
             // 
-            this.Discount_Message.Font = new System.Drawing.Font("Segoe UI Historic", 7F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Discount_Message.ForeColor = System.Drawing.Color.Red;
-            this.Discount_Message.Location = new System.Drawing.Point(507, 543);
-            this.Discount_Message.Name = "Discount_Message";
-            this.Discount_Message.Size = new System.Drawing.Size(201, 13);
-            this.Discount_Message.TabIndex = 29;
-            this.Discount_Message.Text = "The Discount Code Is Not Valable !!!";
-            this.Discount_Message.Visible = false;
+            this.Display_Count.Font = new System.Drawing.Font("Segoe UI Historic", 17.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Display_Count.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Display_Count.Location = new System.Drawing.Point(129, 386);
+            this.Display_Count.Name = "Display_Count";
+            this.Display_Count.Size = new System.Drawing.Size(189, 31);
+            this.Display_Count.TabIndex = 30;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Segoe UI Historic", 17.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(23, 386);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(100, 31);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Count : ";
             // 
             // Display_Discountvalue
             // 
@@ -639,7 +658,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.AddedPriceLable);
+            this.groupBox3.Controls.Add(this.Display_Totale_Toppings);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.BT_Green_Papper);
             this.groupBox3.Controls.Add(this.BT_Tomatos);
@@ -656,17 +675,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Toppings : ";
             // 
-            // AddedPriceLable
+            // Display_Totale_Toppings
             // 
-            this.AddedPriceLable.AutoSize = true;
-            this.AddedPriceLable.BackColor = System.Drawing.SystemColors.Control;
-            this.AddedPriceLable.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddedPriceLable.ForeColor = System.Drawing.Color.Red;
-            this.AddedPriceLable.Location = new System.Drawing.Point(193, 189);
-            this.AddedPriceLable.Name = "AddedPriceLable";
-            this.AddedPriceLable.Size = new System.Drawing.Size(57, 26);
-            this.AddedPriceLable.TabIndex = 4;
-            this.AddedPriceLable.Text = "0.00$";
+            this.Display_Totale_Toppings.AutoSize = true;
+            this.Display_Totale_Toppings.BackColor = System.Drawing.SystemColors.Control;
+            this.Display_Totale_Toppings.Font = new System.Drawing.Font("Segoe Print", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Display_Totale_Toppings.ForeColor = System.Drawing.Color.Red;
+            this.Display_Totale_Toppings.Location = new System.Drawing.Point(193, 189);
+            this.Display_Totale_Toppings.Name = "Display_Totale_Toppings";
+            this.Display_Totale_Toppings.Size = new System.Drawing.Size(57, 26);
+            this.Display_Totale_Toppings.TabIndex = 4;
+            this.Display_Totale_Toppings.Text = "0.00$";
             // 
             // label5
             // 
@@ -858,32 +877,13 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "V 1.0 Beta!";
             // 
-            // Display_Count
-            // 
-            this.Display_Count.Font = new System.Drawing.Font("Segoe UI Historic", 17.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Display_Count.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Display_Count.Location = new System.Drawing.Point(129, 386);
-            this.Display_Count.Name = "Display_Count";
-            this.Display_Count.Size = new System.Drawing.Size(189, 31);
-            this.Display_Count.TabIndex = 30;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Segoe UI Historic", 17.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(23, 386);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 31);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Count : ";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 795);
-            this.Controls.Add(this.Start_Panel);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.Start_Panel);
             this.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -959,7 +959,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label Dispaly_TOTAle_Price;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label AddedPriceLable;
+        private System.Windows.Forms.Label Display_Totale_Toppings;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label8;

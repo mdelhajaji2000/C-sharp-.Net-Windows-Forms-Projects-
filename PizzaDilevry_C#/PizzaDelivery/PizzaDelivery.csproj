@@ -13,10 +13,10 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\mdelh\OneDrive\Desktop\app\</PublishUrl>
+    <PublishUrl>C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\PizzaDilevry_C#\PzzaSetup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
@@ -24,9 +24,14 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/PizzaDelivery/</UpdateUrl>
-    <ApplicationRevision>2</ApplicationRevision>
+    <TargetCulture>ar-MA</TargetCulture>
+    <ProductName>Pizza Dilevry</ProductName>
+    <PublisherName>Mohamed El Hajaji</PublisherName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -60,6 +65,15 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>002-pizza-deliver.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -106,6 +120,7 @@
       <DependentUpon>Shipping.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="PizzaDelivery_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,6 +163,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\check.png" />
+    <Content Include="002-pizza-deliver.ico" />
+    <Content Include="004-pizza-icon.ico" />
     <Content Include="Resources\Discount_Codes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
