@@ -889,6 +889,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pizza Dilevry 1.0.1 (*Beta)";
             this.Start_Panel.ResumeLayout(false);
             this.Start_Panel.PerformLayout();

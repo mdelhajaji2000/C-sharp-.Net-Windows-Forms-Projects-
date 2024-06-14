@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PizzaDelivery.exe" size="164776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PizzaDelivery.exe" size="163240">
       <assemblyIdentity name="PizzaDelivery" version="1.1.0.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>D0tBvM2AKfqT2KtdXBiM8p7EYGUaWo2VzMLIG5qREVk=</dsig:DigestValue>
+        <dsig:DigestValue>ouFmp37NM5eFoqb7qT3tFbzaioSEplZgDapuixi64jE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
