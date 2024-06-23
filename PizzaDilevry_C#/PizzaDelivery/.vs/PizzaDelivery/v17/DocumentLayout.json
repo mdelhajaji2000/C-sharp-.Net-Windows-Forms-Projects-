@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\mdelh\\OneDrive\\Desktop\\My-Full-Real-Projects\\C-sharp-.Net-Windows-Forms-Projects-\\PizzaDilevry_C#\\PizzaDelivery\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFF44892-DE0E-40DB-8872-E45C8634AF38}|PizzaDelivery.csproj|c:\\users\\mdelh\\onedrive\\desktop\\my-full-real-projects\\c-sharp-.net-windows-forms-projects-\\pizzadilevry_c#\\pizzadelivery\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF44892-DE0E-40DB-8872-E45C8634AF38}|PizzaDelivery.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFF44892-DE0E-40DB-8872-E45C8634AF38}|PizzaDelivery.csproj|c:\\users\\mdelh\\onedrive\\desktop\\my-full-real-projects\\c-sharp-.net-windows-forms-projects-\\pizzadilevry_c#\\pizzadelivery\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF44892-DE0E-40DB-8872-E45C8634AF38}|PizzaDelivery.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFF44892-DE0E-40DB-8872-E45C8634AF38}|PizzaDelivery.csproj|C:\\Users\\mdelh\\OneDrive\\Desktop\\My-Full-Real-Projects\\C-sharp-.Net-Windows-Forms-Projects-\\PizzaDilevry_C#\\PizzaDelivery\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -17,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{AFF44892-DE0E-40DB-8872-E45C8634AF38}|PizzaDelivery.csproj|C:\\Users\\mdelh\\OneDrive\\Desktop\\My-Full-Real-Projects\\C-sharp-.Net-Windows-Forms-Projects-\\PizzaDilevry_C#\\PizzaDelivery\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF44892-DE0E-40DB-8872-E45C8634AF38}|PizzaDelivery.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF44892-DE0E-40DB-8872-E45C8634AF38}|PizzaDelivery.csproj|c:\\users\\mdelh\\onedrive\\desktop\\my-full-real-projects\\c-sharp-.net-windows-forms-projects-\\pizzadilevry_c#\\pizzadelivery\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF44892-DE0E-40DB-8872-E45C8634AF38}|PizzaDelivery.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,6 +39,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\mdelh\\OneDrive\\Desktop\\My-Full-Real-Projects\\C-sharp-.Net-Windows-Forms-Projects-\\PizzaDilevry_C#\\PizzaDelivery\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\mdelh\\OneDrive\\Desktop\\My-Full-Real-Projects\\C-sharp-.Net-Windows-Forms-Projects-\\PizzaDilevry_C#\\PizzaDelivery\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAANABAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T01:58:39.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mdelh\\OneDrive\\Desktop\\My-Full-Real-Projects\\C-sharp-.Net-Windows-Forms-Projects-\\PizzaDilevry_C#\\PizzaDelivery\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -53,9 +70,10 @@
               "RelativeDocumentMoniker": "Form1.Designer.cs",
               "ToolTip": "C:\\Users\\mdelh\\OneDrive\\Desktop\\My-Full-Real-Projects\\C-sharp-.Net-Windows-Forms-Projects-\\PizzaDilevry_C#\\PizzaDelivery\\Form1.Designer.cs",
               "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAnAAAA",
+              "ViewState": "AQIAADYBAAAAAAAAAAAAABYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T03:01:25.231Z"
+              "WhenOpened": "2024-06-14T03:01:25.231Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -66,7 +84,8 @@
               "ToolTip": "C:\\Users\\mdelh\\OneDrive\\Desktop\\My-Full-Real-Projects\\C-sharp-.Net-Windows-Forms-Projects-\\PizzaDilevry_C#\\PizzaDelivery\\Shipping.cs [Design]",
               "RelativeToolTip": "Shipping.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T03:01:14.622Z"
+              "WhenOpened": "2024-06-14T03:01:14.622Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -77,7 +96,8 @@
               "ToolTip": "C:\\Users\\mdelh\\OneDrive\\Desktop\\My-Full-Real-Projects\\C-sharp-.Net-Windows-Forms-Projects-\\PizzaDilevry_C#\\PizzaDelivery\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T03:00:09.021Z"
+              "WhenOpened": "2024-06-14T03:00:09.021Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },
