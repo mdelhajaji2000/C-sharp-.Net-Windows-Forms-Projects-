@@ -1,0 +1,10 @@
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\bin\Debug\RCP_Game.exe.config
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\bin\Debug\RCP_Game.exe
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\bin\Debug\RCP_Game.pdb
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\obj\Debug\RCP_Game.csproj.AssemblyReference.cache
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\obj\Debug\RCP_Game.Form1.resources
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\obj\Debug\RCP_Game.Properties.Resources.resources
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\obj\Debug\RCP_Game.csproj.GenerateResource.cache
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\obj\Debug\RCP_Game.csproj.CoreCompileInputs.cache
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\obj\Debug\RCP_Game.exe
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\RCP-Game\RCP_Game\obj\Debug\RCP_Game.pdb
