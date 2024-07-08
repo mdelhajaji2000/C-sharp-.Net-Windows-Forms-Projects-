@@ -29,13 +29,13 @@ namespace PizzaDelivery
         private List<string> Discount_codes = File.ReadAllLines(@"C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\PizzaDilevry_C#\PizzaDelivery\Resources\Discount_Codes.txt").ToList();
         //
         public static string _SPizza_size = "";
-        public string _SCrustType = "";
-        public string _SWhere_To_eat = "";
-        public string _SToppings = "";
-        public string _Scount = "";
-        public string _Sdiscount_value = "";
-        public string _SPizza_type = "";
-        public string _SFinalPrice = "";
+        public static string _SCrustType = "";
+        public static string _SWhere_To_eat = "";
+        public static string _SToppings = "";
+        public static string _Scount = "";
+        public static string _Sdiscount_value = "";
+        public static string _SPizza_type = "";
+        public static string _SFinalPrice = "";
         //
 
         int button = 1;
@@ -427,7 +427,7 @@ namespace PizzaDelivery
             {
                 if (C != null)
                 {
-                    Stoppings += C.Text;
+                    Stoppings += "                 " + C.Text;
                     Stoppings += "\n";
                 }
             }
@@ -490,47 +490,61 @@ namespace PizzaDelivery
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Export_Order.ExportToTxTFile();
+            Export_Order.ExportBillToTxtFile();
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            _SToppings = Get_SToppings();
+            Export_Order.ExportBillToTxtFile();
+
         }
     }
 
 
     internal class Export_Order : Form1
     {
-        public static void ExportToTxTFile()
+
+
+        private static void CreatFile() // Creat a Empty txt File for The Bill
         {
+            string Folderpath;
+            Folderpath = Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFiles);
+
+            // Dont Forget To Specialize the path with the programme file path
+
+            // this code is just for testing while Debugging : 
+            Folderpath = @"C:\Users\mdelh\OneDrive\Desktop";
+            //================================================
+
+            Random rand = new Random();
+            string filename = "Bill_" + rand.Next().ToString() + ".txt";
+            Folderpath = Path.Combine(Folderpath, filename);
+
             try
             {
-                string clientDesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string folderName = "Bills";
-                string folderPath = Path.Combine(clientDesktopPath, folderName);
-
-                // Ensure the folder is created in the correct path
-                if (!Directory.Exists(folderPath))
+                using (StreamWriter fs = new StreamWriter(Folderpath))
                 {
-                    Directory.CreateDirectory(folderPath);
-                    Console.WriteLine("Folder created at: " + folderPath);
-                }
-                else
-                {
-                    Console.WriteLine("Folder already exists at: " + folderPath);
-                }
+                    fs.WriteLine("====================================");
+                    fs.WriteLine("Pizza Size : {0}", _SPizza_size);
+                    fs.WriteLine("Pizza Crust Type : {0}", _SCrustType);
+                    fs.WriteLine("Pizza Toppings : \n{0}", _SToppings);
+                    fs.WriteLine("Eat-IN / Take away : {0}", _SWhere_To_eat);
+                    fs.WriteLine("Pizza Totale Price : {0}", _SFinalPrice);
+                    fs.WriteLine("====================================");
 
-                string fileName = "PizzaBill.txt"; // Ensure to use the proper file extension
-                string filePath = Path.Combine(folderPath, fileName);
-
-                // Using 'using' statement for StreamWriter to ensure proper disposal
-                using (StreamWriter file = new StreamWriter(filePath))
-                {
-                    file.Write("Hello mdf");
                 }
-
-                Console.WriteLine("File created at: " + filePath);
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine("An error occurred: " + ex.Message);
+                MessageBox.Show("ERRRRRR");
             }
         }
+
+        public static void ExportBillToTxtFile()
+        {
+            CreatFile();
+        }
+        
     }
 }

@@ -92,6 +92,7 @@
             this.BT_Pizza_Meduim = new System.Windows.Forms.RadioButton();
             this.BT_Size_Larg = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.Start_Panel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -232,6 +233,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.CB_PizzaType);
             this.panel2.Controls.Add(this.Discount_Message);
@@ -877,6 +879,16 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "V 1.0 Beta!";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(103, 134);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
@@ -980,6 +992,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Display_Count;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button2;
     }
 }
 

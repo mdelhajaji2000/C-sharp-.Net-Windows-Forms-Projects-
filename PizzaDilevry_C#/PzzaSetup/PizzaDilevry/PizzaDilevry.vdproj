@@ -34,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_931233561BA8BEFF35B64BB834A03FC5"
+        "OwnerKey" = "8:_042309A004964D64B6BBC1C946F69D3B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_042309A004964D64B6BBC1C946F69D3B"
+        "OwnerKey" = "8:_931233561BA8BEFF35B64BB834A03FC5"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -61,6 +61,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -77,6 +85,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -181,6 +197,17 @@
                     "Property" = "8:_1D65C67F9C0E40A3943B794EED399D6C"
                         "Folders"
                         {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_F1CB5A50AABA4778B2B3540C1C7A7154"
+                            {
+                            "Name" = "8:Bills"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_A297FE27DD734C5D91F45A8937029B97"
+                                "Folders"
+                                {
+                                }
+                            }
                         }
                     }
                 }
@@ -357,6 +384,20 @@
             "Folder" = "8:_AC4F5D28D88041EA9D8F13EA73FCC9CE"
             "WorkingFolder" = "8:_BCDA10FC7BB84BA0A0D65A02FD0FF69A"
             "Icon" = "8:_25D619132743431987E169C02A6D55CF"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0A74BB238FEA4143A13D6C4A07EE2332"
+            {
+            "Name" = "8:Shortcut to %sBills"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_F1CB5A50AABA4778B2B3540C1C7A7154"
+            "Folder" = "8:_B63E191E3B8744EA9A5ABE8A66B18B98"
+            "WorkingFolder" = "8:_B63E191E3B8744EA9A5ABE8A66B18B98"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D7ACF8AE1C78409AB6E1150634CAD2AE"
