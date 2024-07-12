@@ -15,6 +15,18 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_33E844BB492F4A9E888DE65B2595B5D9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_78D2B7C67DE24F6EAC04B1EE7B77192E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A894CBC5E6A80DC7DC0EBD6C4AF6FB52"
         "OwnerKey" = "8:_BC6546DFB05548AABE7E2F7CC24C7BC1"
         "MsmSig" = "8:_UNDEFINED"
@@ -34,13 +46,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A894CBC5E6A80DC7DC0EBD6C4AF6FB52"
+        "OwnerKey" = "8:_BC6546DFB05548AABE7E2F7CC24C7BC1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BC6546DFB05548AABE7E2F7CC24C7BC1"
+        "OwnerKey" = "8:_A894CBC5E6A80DC7DC0EBD6C4AF6FB52"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -61,6 +73,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -77,6 +97,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -106,6 +142,46 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_33E844BB492F4A9E888DE65B2595B5D9"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\tttest.csv"
+            "TargetName" = "8:tttest.csv"
+            "Tag" = "8:"
+            "Folder" = "8:_5468EA0014E94C6083C1CFBA79DAB8A4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_78D2B7C67DE24F6EAC04B1EE7B77192E"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\tttest.csv"
+            "TargetName" = "8:tttest.csv"
+            "Tag" = "8:"
+            "Folder" = "8:_DE4BDBBCE8D44B098A9D827C2240CA70"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A894CBC5E6A80DC7DC0EBD6C4AF6FB52"
             {
             "AssemblyRegister" = "3:1"
@@ -172,6 +248,17 @@
             "Property" = "8:DesktopFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5468EA0014E94C6083C1CFBA79DAB8A4"
+                    {
+                    "Name" = "8:Bills"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_B98740B92798488FB8D2170923B7099F"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_CC6EF45FFD5E4999BD334CA71301A90C"
@@ -192,6 +279,17 @@
                     "Property" = "8:_ED804C929A1B4A28957FF01BDE14288C"
                         "Folders"
                         {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_BFA0727F6FEB448794D9B2BAE7B149D0"
+                            {
+                            "Name" = "8:Bills"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_BB7FC15D47494B43B31159F237B30182"
+                                "Folders"
+                                {
+                                }
+                            }
                         }
                     }
                 }
@@ -206,6 +304,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_DE4BDBBCE8D44B098A9D827C2240CA70"
+                    {
+                    "Name" = "8:Bills"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_CE02FA9097AD428085941A4C76B90D80"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -225,7 +334,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Pizza_Setup"
         "ProductCode" = "8:{E614BEFB-F953-49C6-B253-4E70903F362A}"
-        "PackageCode" = "8:{B57FB285-E958-43C7-992E-55AC9B100691}"
+        "PackageCode" = "8:{7624F0A6-F220-4519-98FE-2C80FAC2C5F7}"
         "UpgradeCode" = "8:{3EEE5CF3-686D-461C-B666-9D355BA68840}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"

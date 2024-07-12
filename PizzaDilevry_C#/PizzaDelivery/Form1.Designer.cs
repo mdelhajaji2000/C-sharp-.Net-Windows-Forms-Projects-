@@ -92,7 +92,7 @@
             this.BT_Pizza_Meduim = new System.Windows.Forms.RadioButton();
             this.BT_Size_Larg = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Toppings_none_label = new System.Windows.Forms.Label();
             this.Start_Panel.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -103,6 +103,7 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.order_Summary.SuspendLayout();
+            this.ToppingsSumary.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -233,7 +234,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.CB_PizzaType);
             this.panel2.Controls.Add(this.Discount_Message);
@@ -556,6 +556,7 @@
             // 
             // ToppingsSumary
             // 
+            this.ToppingsSumary.Controls.Add(this.Toppings_none_label);
             this.ToppingsSumary.Location = new System.Drawing.Point(183, 94);
             this.ToppingsSumary.Name = "ToppingsSumary";
             this.ToppingsSumary.Size = new System.Drawing.Size(204, 165);
@@ -879,15 +880,15 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "V 1.0 Beta!";
             // 
-            // button2
+            // Toppings_none_label
             // 
-            this.button2.Location = new System.Drawing.Point(103, 134);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            this.Toppings_none_label.Font = new System.Drawing.Font("Segoe UI Historic", 17.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Toppings_none_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Toppings_none_label.Location = new System.Drawing.Point(-8, 4);
+            this.Toppings_none_label.Name = "Toppings_none_label";
+            this.Toppings_none_label.Size = new System.Drawing.Size(93, 31);
+            this.Toppings_none_label.TabIndex = 32;
+            this.Toppings_none_label.Text = "NONE";
             // 
             // Form1
             // 
@@ -918,6 +919,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.order_Summary.ResumeLayout(false);
+            this.ToppingsSumary.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -992,7 +994,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Display_Count;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label Toppings_none_label;
     }
 }
 

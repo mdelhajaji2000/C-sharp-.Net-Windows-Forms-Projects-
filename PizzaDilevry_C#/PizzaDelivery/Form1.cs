@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.ComponentModel.Design;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 namespace PizzaDelivery
 {
@@ -26,6 +27,7 @@ namespace PizzaDelivery
         private double _Price = 0d;
         private int ToppingsAddedCounter = 0;
         private double _Sizeprice = 0d;
+        private bool IsForShipping = false;
         private List<string> Discount_codes = File.ReadAllLines(@"C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\PizzaDilevry_C#\PizzaDelivery\Resources\Discount_Codes.txt").ToList();
         //
         public static string _SPizza_size = "";
@@ -37,6 +39,8 @@ namespace PizzaDelivery
         public static string _SPizza_type = "";
         public static string _SFinalPrice = "";
         //
+
+        public static Shipping ShippingForm = new Shipping();
 
         int button = 1;
 
@@ -65,11 +69,12 @@ namespace PizzaDelivery
         public Form1()
         {
             InitializeComponent();
-            Buttons_Array();
+            labels_Array();
             this.Start_Panel.BringToFront();
+            Reset_All();
         }
 
-        private void Buttons_Array()
+        private void labels_Array()
         {
             labels = new Label[max_labels];
             Console.WriteLine("label {0} : created", (max_labels));
@@ -188,6 +193,11 @@ namespace PizzaDelivery
 
             labels[count] = newLabel;
             count++;
+
+            if (count > 0)
+            {
+                Toppings_none_label.Visible = false;
+            }
         }
 
         private void RemoveLabel(int tag)
@@ -207,6 +217,11 @@ namespace PizzaDelivery
 
                 labels[count - 1] = null;
                 count--;
+            }
+
+            if (count == 0)
+            {
+                Toppings_none_label.Visible = true;
             }
         }
 
@@ -364,7 +379,13 @@ namespace PizzaDelivery
             DIsplay_Where_TO_Eat.Text = "Take-out";
         }
 
+
         private void TB_reset_Click(object sender, EventArgs e)
+        {
+            Reset_All();
+        }
+
+        private void Reset_All()
         {
             BT_Size_Small.Checked = false;
             BT_Pizza_Meduim.Checked = false;
@@ -396,7 +417,7 @@ namespace PizzaDelivery
             MTB_DiscountCode.Text = "";
             Display_PizzaType.Text = "Normal";
             Display_Discountvalue.Text = "-0%";
-            
+
             Display_Size.Text = "";
             DIsplay_Where_TO_Eat.Text = "";
             Display_CrustType.Text = "";
@@ -410,14 +431,51 @@ namespace PizzaDelivery
             _Toppings = 0d;
             _Discount = false;
             UpdateToTalePrice(_Size, _Toppings, _Count, false);
+
+            Toppings_none_label.Visible = true;
+        }
+
+        public static bool _IsForShipping()
+        {
+            if (_SWhere_To_eat == "Take-out")
+                return true;
+            return false;
         }
 
         private void TB_Order_Click(object sender, EventArgs e)
         {
             Console.WriteLine(Get_SToppings());
+            Fill_Bill_Informatioms();
+            if (Check_Order_Ability())
+            {
+                if (_IsForShipping())
+                {
+                    ShippingForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Order Taken Successfuly : Click OK To Get The Bill", "Order Taken", MessageBoxButtons.OK);
+                    Export_Order.ExportBillToTxtFile();
+                }
+
+            }
+            else return;
+        }
+
+        private void Fill_Bill_Informatioms()
+        {
             _SToppings = Get_SToppings();
-            Shipping ShippingForm = new Shipping();
-            ShippingForm.ShowDialog();
+            if (string.IsNullOrEmpty(_SToppings))
+            {
+                _SToppings = "None";
+            }
+
+            if (string.IsNullOrEmpty(_SPizza_type))
+            {
+                _SPizza_type = "Normal";
+            }
+
+            _SWhere_To_eat = DIsplay_Where_TO_Eat.Text;
         }
 
         protected string Get_SToppings()
@@ -427,9 +485,10 @@ namespace PizzaDelivery
             {
                 if (C != null)
                 {
-                    Stoppings += "                 " + C.Text;
+                    Stoppings += "" + C.Text;
                     Stoppings += "\n";
                 }
+                Stoppings += "                       ";
             }
 
             return Stoppings;
@@ -499,45 +558,95 @@ namespace PizzaDelivery
             Export_Order.ExportBillToTxtFile();
 
         }
+
+        private bool Check_Order_Ability()
+        {
+            if (
+                string.IsNullOrEmpty(_SPizza_size) || 
+                string.IsNullOrEmpty(_SCrustType) ||
+                string.IsNullOrEmpty(_SWhere_To_eat)
+                //string.IsNullOrEmpty(_SToppings) ||  (Not Nesseeery !)
+                //string.IsNullOrEmpty(_Scount) ||
+                //string.IsNullOrEmpty() ||
+            )
+            {
+                MessageBox.Show("Please Go Fill The Nessassry Pizza Informations", "Error");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 
 
     internal class Export_Order : Form1
     {
 
+        public static void OpenBillFile(string bill_path)
+        {
+            try
+            {
+                Process.Start("notepad.exe", bill_path);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error");
+            }
+        }
 
         private static void CreatFile() // Creat a Empty txt File for The Bill
         {
             string Folderpath;
-            Folderpath = Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFiles);
+            Folderpath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
             // Dont Forget To Specialize the path with the programme file path
 
             // this code is just for testing while Debugging : 
-            Folderpath = @"C:\Users\mdelh\OneDrive\Desktop";
+            // Folderpath = @"C:\Users\mdelh\OneDrive\Desktop";
             //================================================
 
+            Folderpath = Path.Combine(Folderpath, "Bills");
+
             Random rand = new Random();
-            string filename = "Bill_" + rand.Next().ToString() + ".txt";
+            string Bill_NO = rand.Next().ToString();
+            string filename = "Bill_" + Bill_NO + ".txt";
             Folderpath = Path.Combine(Folderpath, filename);
 
             try
             {
                 using (StreamWriter fs = new StreamWriter(Folderpath))
                 {
-                    fs.WriteLine("====================================");
-                    fs.WriteLine("Pizza Size : {0}", _SPizza_size);
-                    fs.WriteLine("Pizza Crust Type : {0}", _SCrustType);
-                    fs.WriteLine("Pizza Toppings : \n{0}", _SToppings);
-                    fs.WriteLine("Eat-IN / Take away : {0}", _SWhere_To_eat);
-                    fs.WriteLine("Pizza Totale Price : {0}", _SFinalPrice);
-                    fs.WriteLine("====================================");
+                    fs.WriteLine("         Bill NO : {0}", Bill_NO);
+                    fs.WriteLine("=============================================");
+                    fs.WriteLine("* Pizza Information`s : ");
+                    fs.WriteLine("      Pizza Size : {0}", _SPizza_size);
+                    fs.WriteLine("      Pizza Crust Type : {0}", _SCrustType);
+                    fs.WriteLine("      Pizza Toppings : {0}", _SToppings);
+                    fs.WriteLine("      Eat-IN / Take away : {0}", _SWhere_To_eat);
+                    fs.WriteLine("* Price : ");
+                    fs.WriteLine("      Pizza Total Price : {0}$", _SFinalPrice);
+                    fs.WriteLine("=============================================");
+                    if (Form1._IsForShipping())
+                    {
+                        fs.WriteLine("* Shipping info : ");
+                        fs.WriteLine("      First Name    : {0}", ShippingForm.FirstName);
+                        fs.WriteLine("      Last name     : {0}", ShippingForm.LastName);
+                        fs.WriteLine("      Phone Number  : {0}", ShippingForm.Phone);
+                        fs.WriteLine("      Address        : {0}", ShippingForm.Adress);
+                        fs.WriteLine("      Notes         : {0}", ShippingForm.Notes);
+                        fs.WriteLine("=============================================");
+                    }
+
 
                 }
+
+                OpenBillFile(Folderpath);
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("ERRRRRR");
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -545,6 +654,7 @@ namespace PizzaDelivery
         {
             CreatFile();
         }
+
         
     }
 }
