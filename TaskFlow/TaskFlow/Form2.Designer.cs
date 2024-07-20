@@ -134,6 +134,7 @@
             this.Return_BT.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Return_BT.Name = "Return_BT";
             this.Return_BT.UseVisualStyleBackColor = true;
+            this.Return_BT.Click += new System.EventHandler(this.Return_BT_Click);
             // 
             // Creat_New_Task_BT
             // 
@@ -173,6 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Main_panel);
             this.Name = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.Main_panel.ResumeLayout(false);
             this.Main_panel.PerformLayout();
             this.panel2.ResumeLayout(false);

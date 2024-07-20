@@ -11,3 +11,16 @@ C:\Users\mdelh\source\repos\TaskFlow\obj\Debug\TaskFlow.pdb
 C:\Users\mdelh\source\repos\TaskFlow\obj\Debug\TaskFlow.Form2.resources
 C:\Users\mdelh\source\repos\TaskFlow\obj\Debug\TaskFlow.Form3.resources
 C:\Users\mdelh\source\repos\TaskFlow\obj\Debug\TaskFlow.Form4.resources
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\TaskFlow.exe.config
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\TaskFlow.exe
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\TaskFlow.pdb
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.csproj.AssemblyReference.cache
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.Form1.resources
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.Form2.resources
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.Form3.resources
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.Form4.resources
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.Properties.Resources.resources
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.csproj.GenerateResource.cache
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.csproj.CoreCompileInputs.cache
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.exe
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.pdb

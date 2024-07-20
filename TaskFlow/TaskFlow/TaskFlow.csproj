@@ -137,5 +137,32 @@
   <ItemGroup>
     <None Include="Resources\task1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-no-results1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-remove-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-filter.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

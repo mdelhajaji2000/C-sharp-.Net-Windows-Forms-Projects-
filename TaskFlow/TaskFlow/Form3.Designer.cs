@@ -76,6 +76,7 @@
             this.dateTimePicker_Expire.Name = "dateTimePicker_Expire";
             this.dateTimePicker_Expire.Size = new System.Drawing.Size(197, 20);
             this.dateTimePicker_Expire.TabIndex = 16;
+            this.dateTimePicker_Expire.ValueChanged += new System.EventHandler(this.dateTimePicker_Expire_ValueChanged);
             // 
             // dateTimePicker_Starting
             // 
@@ -83,6 +84,7 @@
             this.dateTimePicker_Starting.Name = "dateTimePicker_Starting";
             this.dateTimePicker_Starting.Size = new System.Drawing.Size(197, 20);
             this.dateTimePicker_Starting.TabIndex = 15;
+            this.dateTimePicker_Starting.ValueChanged += new System.EventHandler(this.dateTimePicker_Starting_ValueChanged);
             // 
             // Task_Details_Text_box
             // 
@@ -93,6 +95,7 @@
             this.Task_Details_Text_box.Name = "Task_Details_Text_box";
             this.Task_Details_Text_box.Size = new System.Drawing.Size(351, 149);
             this.Task_Details_Text_box.TabIndex = 14;
+            this.Task_Details_Text_box.TextChanged += new System.EventHandler(this.Task_Details_Text_box_TextChanged);
             // 
             // Task_Title_Text_Box
             // 
@@ -102,6 +105,7 @@
             this.Task_Title_Text_Box.Name = "Task_Title_Text_Box";
             this.Task_Title_Text_Box.Size = new System.Drawing.Size(351, 47);
             this.Task_Title_Text_Box.TabIndex = 13;
+            this.Task_Title_Text_Box.TextChanged += new System.EventHandler(this.Task_Title_Text_Box_TextChanged);
             // 
             // label5
             // 
@@ -173,6 +177,7 @@
             this.Return_BT.TabIndex = 10;
             this.Return_BT.Text = "Return";
             this.Return_BT.UseVisualStyleBackColor = true;
+            this.Return_BT.Click += new System.EventHandler(this.Return_BT_Click);
             // 
             // Edit_Task_BT
             // 
@@ -185,6 +190,7 @@
             this.Edit_Task_BT.TabIndex = 9;
             this.Edit_Task_BT.Text = "Edit";
             this.Edit_Task_BT.UseVisualStyleBackColor = true;
+            this.Edit_Task_BT.Click += new System.EventHandler(this.Edit_Task_BT_Click);
             // 
             // panel1
             // 
