@@ -105,4 +105,8 @@ If you have any questions or feedback, feel free to contact me at [mdelhajajipro
 
 ---
 
+All Those Projects Arent Completed Yet..!
+
+---
+
 Thank you for visiting my repository! Enjoy exploring the projects.
