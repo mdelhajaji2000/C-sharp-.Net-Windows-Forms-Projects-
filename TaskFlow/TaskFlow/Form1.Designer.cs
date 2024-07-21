@@ -37,6 +37,22 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.Stats_Refresh_BT = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.Canceled_Task_Counter = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.Done_Task_Counter = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.NotDone_task_Counter = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.Totale_Task_Counter = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.About_BT = new System.Windows.Forms.Button();
             this.Reset_From_BT = new System.Windows.Forms.Button();
             this.Show_Tasks_BT = new System.Windows.Forms.Button();
@@ -51,11 +67,13 @@
             this.Main_Title_Label = new System.Windows.Forms.Label();
             this.Show_Tasks_Panel = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Search_Text_Box = new System.Windows.Forms.TextBox();
             this.Selected_Task_Name_Label = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Find_Task_BT = new System.Windows.Forms.Button();
+            this.Search_BT = new System.Windows.Forms.Button();
             this.Create_New_Bt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Mark_To_Select_TaskStatus_label = new System.Windows.Forms.Panel();
@@ -82,16 +100,22 @@
             this.Start_Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Expired_Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.return_ToMain_BT = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.Main_Panel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,9 +123,9 @@
             this.panel7.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Mark_To_Select_TaskStatus_label.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // Main_Panel
@@ -169,6 +193,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.About_BT);
             this.panel4.Controls.Add(this.Reset_From_BT);
             this.panel4.Controls.Add(this.Show_Tasks_BT);
@@ -180,10 +205,180 @@
             this.panel4.Size = new System.Drawing.Size(1851, 734);
             this.panel4.TabIndex = 5;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel8.Controls.Add(this.Stats_Refresh_BT);
+            this.panel8.Controls.Add(this.pictureBox3);
+            this.panel8.Controls.Add(this.panel11);
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Controls.Add(this.panel12);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Controls.Add(this.label19);
+            this.panel8.Location = new System.Drawing.Point(191, 83);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1412, 215);
+            this.panel8.TabIndex = 12;
+            // 
+            // Stats_Refresh_BT
+            // 
+            this.Stats_Refresh_BT.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Stats_Refresh_BT.BackgroundImage = global::TaskFlow.Properties.Resources.loading_arrow;
+            this.Stats_Refresh_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Stats_Refresh_BT.Location = new System.Drawing.Point(672, 164);
+            this.Stats_Refresh_BT.Name = "Stats_Refresh_BT";
+            this.Stats_Refresh_BT.Size = new System.Drawing.Size(50, 44);
+            this.Stats_Refresh_BT.TabIndex = 5;
+            this.Stats_Refresh_BT.UseVisualStyleBackColor = false;
+            this.Stats_Refresh_BT.Click += new System.EventHandler(this.Stats_Refresh_BT_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::TaskFlow.Properties.Resources.stats;
+            this.pictureBox3.Location = new System.Drawing.Point(629, 58);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(134, 103);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.Canceled_Task_Counter);
+            this.panel11.Controls.Add(this.label23);
+            this.panel11.Location = new System.Drawing.Point(1124, 18);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(254, 170);
+            this.panel11.TabIndex = 4;
+            // 
+            // Canceled_Task_Counter
+            // 
+            this.Canceled_Task_Counter.AutoSize = true;
+            this.Canceled_Task_Counter.Font = new System.Drawing.Font("Stencil", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Canceled_Task_Counter.ForeColor = System.Drawing.Color.Red;
+            this.Canceled_Task_Counter.Location = new System.Drawing.Point(74, 67);
+            this.Canceled_Task_Counter.Name = "Canceled_Task_Counter";
+            this.Canceled_Task_Counter.Size = new System.Drawing.Size(73, 80);
+            this.Canceled_Task_Counter.TabIndex = 3;
+            this.Canceled_Task_Counter.Text = "0";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Poor Richard", 26.25F, System.Drawing.FontStyle.Bold);
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(3, 11);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(234, 41);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Canceled Tasks";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.Done_Task_Counter);
+            this.panel10.Controls.Add(this.label21);
+            this.panel10.Location = new System.Drawing.Point(314, 18);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(219, 170);
+            this.panel10.TabIndex = 2;
+            // 
+            // Done_Task_Counter
+            // 
+            this.Done_Task_Counter.AutoSize = true;
+            this.Done_Task_Counter.Font = new System.Drawing.Font("Stencil", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Done_Task_Counter.ForeColor = System.Drawing.Color.Lime;
+            this.Done_Task_Counter.Location = new System.Drawing.Point(54, 67);
+            this.Done_Task_Counter.Name = "Done_Task_Counter";
+            this.Done_Task_Counter.Size = new System.Drawing.Size(73, 80);
+            this.Done_Task_Counter.TabIndex = 2;
+            this.Done_Task_Counter.Text = "0";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Poor Richard", 26.25F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.Lime;
+            this.label21.Location = new System.Drawing.Point(21, 11);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(174, 41);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Done Tasks";
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.NotDone_task_Counter);
+            this.panel12.Controls.Add(this.label22);
+            this.panel12.Location = new System.Drawing.Point(861, 18);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(225, 170);
+            this.panel12.TabIndex = 3;
+            // 
+            // NotDone_task_Counter
+            // 
+            this.NotDone_task_Counter.AutoSize = true;
+            this.NotDone_task_Counter.Font = new System.Drawing.Font("Stencil", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotDone_task_Counter.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.NotDone_task_Counter.Location = new System.Drawing.Point(52, 67);
+            this.NotDone_task_Counter.Name = "NotDone_task_Counter";
+            this.NotDone_task_Counter.Size = new System.Drawing.Size(73, 80);
+            this.NotDone_task_Counter.TabIndex = 3;
+            this.NotDone_task_Counter.Text = "0";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Poor Richard", 26.25F, System.Drawing.FontStyle.Bold);
+            this.label22.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label22.Location = new System.Drawing.Point(-6, 11);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(232, 41);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Not Done Tasks";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.Totale_Task_Counter);
+            this.panel9.Controls.Add(this.label20);
+            this.panel9.Location = new System.Drawing.Point(22, 18);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(219, 170);
+            this.panel9.TabIndex = 1;
+            // 
+            // Totale_Task_Counter
+            // 
+            this.Totale_Task_Counter.AutoSize = true;
+            this.Totale_Task_Counter.Font = new System.Drawing.Font("Stencil", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Totale_Task_Counter.Location = new System.Drawing.Point(47, 67);
+            this.Totale_Task_Counter.Name = "Totale_Task_Counter";
+            this.Totale_Task_Counter.Size = new System.Drawing.Size(73, 80);
+            this.Totale_Task_Counter.TabIndex = 1;
+            this.Totale_Task_Counter.Text = "0";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Poor Richard", 26.25F, System.Drawing.FontStyle.Bold);
+            this.label20.Location = new System.Drawing.Point(8, 11);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(208, 41);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Totale Tasks : ";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Poor Richard", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(576, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(242, 55);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Stats Board";
+            // 
             // About_BT
             // 
             this.About_BT.Font = new System.Drawing.Font("Times New Roman", 25F);
-            this.About_BT.Location = new System.Drawing.Point(451, 389);
+            this.About_BT.Location = new System.Drawing.Point(489, 535);
             this.About_BT.Name = "About_BT";
             this.About_BT.Size = new System.Drawing.Size(842, 65);
             this.About_BT.TabIndex = 11;
@@ -193,7 +388,7 @@
             // Reset_From_BT
             // 
             this.Reset_From_BT.Font = new System.Drawing.Font("Times New Roman", 25F);
-            this.Reset_From_BT.Location = new System.Drawing.Point(451, 318);
+            this.Reset_From_BT.Location = new System.Drawing.Point(489, 464);
             this.Reset_From_BT.Name = "Reset_From_BT";
             this.Reset_From_BT.Size = new System.Drawing.Size(842, 65);
             this.Reset_From_BT.TabIndex = 10;
@@ -203,7 +398,7 @@
             // Show_Tasks_BT
             // 
             this.Show_Tasks_BT.Font = new System.Drawing.Font("Times New Roman", 25F);
-            this.Show_Tasks_BT.Location = new System.Drawing.Point(451, 247);
+            this.Show_Tasks_BT.Location = new System.Drawing.Point(489, 393);
             this.Show_Tasks_BT.Name = "Show_Tasks_BT";
             this.Show_Tasks_BT.Size = new System.Drawing.Size(842, 65);
             this.Show_Tasks_BT.TabIndex = 9;
@@ -213,8 +408,9 @@
             // 
             // Creat_New_Task_BT
             // 
+            this.Creat_New_Task_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Creat_New_Task_BT.Font = new System.Drawing.Font("Times New Roman", 25F);
-            this.Creat_New_Task_BT.Location = new System.Drawing.Point(451, 177);
+            this.Creat_New_Task_BT.Location = new System.Drawing.Point(489, 323);
             this.Creat_New_Task_BT.Name = "Creat_New_Task_BT";
             this.Creat_New_Task_BT.Size = new System.Drawing.Size(842, 65);
             this.Creat_New_Task_BT.TabIndex = 8;
@@ -227,7 +423,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rage Italic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(643, 130);
+            this.label4.Location = new System.Drawing.Point(645, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(460, 44);
             this.label4.TabIndex = 7;
@@ -322,11 +518,13 @@
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label17);
+            this.panel7.Controls.Add(this.comboBox1);
             this.panel7.Controls.Add(this.button2);
-            this.panel7.Controls.Add(this.button3);
+            this.panel7.Controls.Add(this.Search_Text_Box);
             this.panel7.Controls.Add(this.Selected_Task_Name_Label);
             this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.Find_Task_BT);
+            this.panel7.Controls.Add(this.Search_BT);
             this.panel7.Controls.Add(this.Create_New_Bt);
             this.panel7.Controls.Add(this.groupBox1);
             this.panel7.Controls.Add(this.Edit_BT);
@@ -337,36 +535,58 @@
             this.panel7.Size = new System.Drawing.Size(191, 634);
             this.panel7.TabIndex = 16;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.758F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(4, 144);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(65, 22);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "Filter : ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "All",
+            "Completed",
+            "Not Done Yet",
+            "Canceled"});
+            this.comboBox1.Location = new System.Drawing.Point(13, 169);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 28);
+            this.comboBox1.TabIndex = 19;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // button2
             // 
-            this.button2.BackgroundImage = global::TaskFlow.Properties.Resources._001_filter;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.button2.Location = new System.Drawing.Point(13, 147);
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(14, 102);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 65);
+            this.button2.Size = new System.Drawing.Size(161, 37);
             this.button2.TabIndex = 18;
+            this.button2.Text = "Clear All";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // Search_Text_Box
             // 
-            this.button3.BackgroundImage = global::TaskFlow.Properties.Resources._001_database;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Enabled = false;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.button3.Location = new System.Drawing.Point(91, 147);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 65);
-            this.button3.TabIndex = 17;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.Search_Text_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_Text_Box.Location = new System.Drawing.Point(14, 66);
+            this.Search_Text_Box.Name = "Search_Text_Box";
+            this.Search_Text_Box.Size = new System.Drawing.Size(121, 30);
+            this.Search_Text_Box.TabIndex = 17;
             // 
             // Selected_Task_Name_Label
             // 
             this.Selected_Task_Name_Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Selected_Task_Name_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Selected_Task_Name_Label.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.Selected_Task_Name_Label.Location = new System.Drawing.Point(13, 246);
+            this.Selected_Task_Name_Label.Location = new System.Drawing.Point(15, 224);
             this.Selected_Task_Name_Label.Name = "Selected_Task_Name_Label";
             this.Selected_Task_Name_Label.Size = new System.Drawing.Size(151, 73);
             this.Selected_Task_Name_Label.TabIndex = 16;
@@ -377,22 +597,23 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 215);
+            this.label7.Location = new System.Drawing.Point(5, 200);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(180, 22);
             this.label7.TabIndex = 15;
             this.label7.Text = "Selected Task Title : ";
             // 
-            // Find_Task_BT
+            // Search_BT
             // 
-            this.Find_Task_BT.BackgroundImage = global::TaskFlow.Properties.Resources._004_find;
-            this.Find_Task_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Find_Task_BT.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.Find_Task_BT.Location = new System.Drawing.Point(13, 76);
-            this.Find_Task_BT.Name = "Find_Task_BT";
-            this.Find_Task_BT.Size = new System.Drawing.Size(72, 65);
-            this.Find_Task_BT.TabIndex = 12;
-            this.Find_Task_BT.UseVisualStyleBackColor = true;
+            this.Search_BT.BackgroundImage = global::TaskFlow.Properties.Resources._004_find;
+            this.Search_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Search_BT.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.Search_BT.Location = new System.Drawing.Point(141, 61);
+            this.Search_BT.Name = "Search_BT";
+            this.Search_BT.Size = new System.Drawing.Size(35, 35);
+            this.Search_BT.TabIndex = 12;
+            this.Search_BT.UseVisualStyleBackColor = true;
+            this.Search_BT.Click += new System.EventHandler(this.Search_BT_Click);
             // 
             // Create_New_Bt
             // 
@@ -400,9 +621,9 @@
             this.Create_New_Bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Create_New_Bt.Font = new System.Drawing.Font("Times New Roman", 15F);
             this.Create_New_Bt.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Create_New_Bt.Location = new System.Drawing.Point(13, 5);
+            this.Create_New_Bt.Location = new System.Drawing.Point(14, 5);
             this.Create_New_Bt.Name = "Create_New_Bt";
-            this.Create_New_Bt.Size = new System.Drawing.Size(72, 65);
+            this.Create_New_Bt.Size = new System.Drawing.Size(50, 50);
             this.Create_New_Bt.TabIndex = 9;
             this.Create_New_Bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Create_New_Bt.UseVisualStyleBackColor = true;
@@ -434,7 +655,7 @@
             // Mark_To_Select_TaskStatus_label
             // 
             this.Mark_To_Select_TaskStatus_label.Controls.Add(this.label15);
-            this.Mark_To_Select_TaskStatus_label.Location = new System.Drawing.Point(0, 1);
+            this.Mark_To_Select_TaskStatus_label.Location = new System.Drawing.Point(0, 0);
             this.Mark_To_Select_TaskStatus_label.Name = "Mark_To_Select_TaskStatus_label";
             this.Mark_To_Select_TaskStatus_label.Size = new System.Drawing.Size(179, 343);
             this.Mark_To_Select_TaskStatus_label.TabIndex = 14;
@@ -578,10 +799,10 @@
             this.Edit_BT.Enabled = false;
             this.Edit_BT.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.Edit_BT.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.Edit_BT.Location = new System.Drawing.Point(91, 5);
+            this.Edit_BT.Location = new System.Drawing.Point(70, 5);
             this.Edit_BT.Name = "Edit_BT";
             this.Edit_BT.Padding = new System.Windows.Forms.Padding(5);
-            this.Edit_BT.Size = new System.Drawing.Size(72, 65);
+            this.Edit_BT.Size = new System.Drawing.Size(50, 50);
             this.Edit_BT.TabIndex = 10;
             this.Edit_BT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Edit_BT.UseVisualStyleBackColor = true;
@@ -593,9 +814,9 @@
             this.Remove_Task_Bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Remove_Task_Bt.Enabled = false;
             this.Remove_Task_Bt.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.Remove_Task_Bt.Location = new System.Drawing.Point(91, 76);
+            this.Remove_Task_Bt.Location = new System.Drawing.Point(126, 5);
             this.Remove_Task_Bt.Name = "Remove_Task_Bt";
-            this.Remove_Task_Bt.Size = new System.Drawing.Size(72, 65);
+            this.Remove_Task_Bt.Size = new System.Drawing.Size(50, 50);
             this.Remove_Task_Bt.TabIndex = 11;
             this.Remove_Task_Bt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Remove_Task_Bt.UseVisualStyleBackColor = true;
@@ -671,17 +892,26 @@
             this.imageList1.Images.SetKeyName(1, "007-correct.png");
             this.imageList1.Images.SetKeyName(2, "008-cancelled.png");
             // 
-            // panel5
+            // panel6
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.pictureBox2);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1851, 100);
-            this.panel5.TabIndex = 0;
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label18);
+            this.panel6.Controls.Add(this.button1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 734);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1851, 100);
+            this.panel6.TabIndex = 1;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(886, 78);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(160, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Beta V 1.1.08 By mdelhajaji2000";
             // 
             // button1
             // 
@@ -692,6 +922,33 @@
             this.button1.Text = "Fill Random";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.return_ToMain_BT);
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.pictureBox2);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1851, 100);
+            this.panel5.TabIndex = 0;
+            // 
+            // return_ToMain_BT
+            // 
+            this.return_ToMain_BT.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.return_ToMain_BT.BackgroundImage = global::TaskFlow.Properties.Resources.turn_back;
+            this.return_ToMain_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.return_ToMain_BT.FlatAppearance.BorderSize = 0;
+            this.return_ToMain_BT.Location = new System.Drawing.Point(1771, 11);
+            this.return_ToMain_BT.Margin = new System.Windows.Forms.Padding(0);
+            this.return_ToMain_BT.Name = "return_ToMain_BT";
+            this.return_ToMain_BT.Size = new System.Drawing.Size(67, 65);
+            this.return_ToMain_BT.TabIndex = 4;
+            this.return_ToMain_BT.UseVisualStyleBackColor = false;
+            this.return_ToMain_BT.Click += new System.EventHandler(this.return_ToMain_BT_Click);
             // 
             // label6
             // 
@@ -713,37 +970,6 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label18);
-            this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.button1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 734);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1851, 100);
-            this.panel6.TabIndex = 1;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(0, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(41, 13);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "label17";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(886, 78);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(160, 13);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Beta V 1.1.08 By mdelhajaji2000";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -761,6 +987,17 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -773,11 +1010,11 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.Mark_To_Select_TaskStatus_label.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -814,7 +1051,7 @@
         private System.Windows.Forms.ColumnHeader Start_Date;
         private System.Windows.Forms.ColumnHeader Expired_Date;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button Find_Task_BT;
+        private System.Windows.Forms.Button Search_BT;
         private System.Windows.Forms.Button Remove_Task_Bt;
         private System.Windows.Forms.Button Edit_BT;
         private System.Windows.Forms.Button Create_New_Bt;
@@ -838,11 +1075,29 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox Search_Text_Box;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label Canceled_Task_Counter;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label Done_Task_Counter;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label NotDone_task_Counter;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label Totale_Task_Counter;
+        private System.Windows.Forms.Button Stats_Refresh_BT;
+        private System.Windows.Forms.Button return_ToMain_BT;
     }
 }
 

@@ -23,7 +23,7 @@ namespace TaskFlow
             Task_Title_Text_Box.Focus();
 
             dateTimePicker_Starting.Text = DateTime.Now.ToString();
-            dateTimePicker_Expire.Text = DateTime.Now.ToString();
+            dateTimePicker_Expire.Text = DateTime.Now.AddDays(1).ToString();
         }
 
         public static string Task_Title;
