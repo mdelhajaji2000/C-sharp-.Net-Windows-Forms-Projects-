@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
@@ -499,6 +500,34 @@ namespace TaskFlow
             Main_Panel.BringToFront();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.instagram.com/mdelhajaji2000/");
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/mdelhajaji2000");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Process.Start("mailto:mdelhajajipro2007@gmail.com");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Process.Start("mailto:mdelhajajipro2007@gmail.com");
+        }
+
+        private void About_BT_Click(object sender, EventArgs e)
+        {
+            About_The_Devalloper_Panel.BringToFront();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Main_Panel.BringToFront();
+        }
     }
 }

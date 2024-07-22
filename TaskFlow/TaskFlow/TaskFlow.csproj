@@ -179,5 +179,17 @@
   <ItemGroup>
     <None Include="Resources\turn-back.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-gmail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-feedback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
