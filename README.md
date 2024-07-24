@@ -16,7 +16,9 @@ Welcome to my repository showcasing three different C# .NET Windows Forms applic
 - **Task Categorization**: Organize tasks by categories.
 - **Priority Setting**: Assign priority levels to tasks.
 - **Deadline Management**: Set deadlines and receive notifications.
-
+~~~
+Notice : Not All Features Are Done ...!
+~~~
 ### 2. RCP-Game
 
 ![RCP-Game](./Z_Programmes_Icons/rock-paper-scissors.png)
@@ -26,7 +28,9 @@ Welcome to my repository showcasing three different C# .NET Windows Forms applic
 - **User vs Computer Gameplay**: Choose between rock, paper, or scissors and compete against the computer.
 - **Score Tracking**: Keeps track of the number of wins, losses, and ties.
 - **User Interface**: Simple and intuitive UI for seamless gameplay.
-
+~~~
+Notice : Not All Features Are Done ...!
+~~~
 ### 3. Pizza-Delivery
 
 ![Pizza-Delivery](./Z_Programmes_Icons/pizza-deliver.png)
@@ -37,7 +41,9 @@ Welcome to my repository showcasing three different C# .NET Windows Forms applic
 - **Customer Information**: Store and manage customer details.
 - **Pizza Customization**: Customize pizzas with various toppings and sizes.
 - **Order Tracking**: Track the status of each order from preparation to delivery.
-
+~~~
+Notice : Not All Features Are Done ...!
+~~~
 ## Getting Started
 
 To get started with any of these projects, follow the instructions below:
