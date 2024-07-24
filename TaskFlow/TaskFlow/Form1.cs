@@ -15,8 +15,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace TaskFlow
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form 
     {
+
+        private List<ListViewItem> All_Items;
         public Form1()
         {
             InitializeComponent();
@@ -24,43 +26,17 @@ namespace TaskFlow
             All_Items = new List<ListViewItem>();
         }
 
-        private void Show_Tasks_BT_Click(object sender, EventArgs e)
-        {
-            Show_Tasks_Panel.BringToFront();
-        }
+        #region States Variables
 
-        private List<ListViewItem> All_Items;
-        List<ListViewItem> Clear = new List<ListViewItem>(); // used To Clear Lists
-
+        // Those int variables are used In The Stats Board in the main panel
         int DoneTaskCount = 0;
         int CanceledTaskCount = 0;
         int NotDoneTaskCount = 0;
         int TotaleTaskCount = 0;  // Soon Those int will be autoFiled By The Data Base...
 
-        private void Copy_TaskListItems_To_List()
-        {
-            if (All_Items.Count == 0)
-            {
-                foreach (ListViewItem item in Task_List.Items)
-                {
-                    All_Items.Add(item);
-                }
-            }
-        }
+        #endregion
 
-        #region App Main Functions
-
-        private void Check_items_Count()
-        {
-            if (Task_List.Items.Count == 0)
-            {
-                No_Tasks_Mark_Label.Visible = true;
-            }
-            else
-            {
-                No_Tasks_Mark_Label.Visible = false;
-            }
-        }
+        #region Application Back-End Functions 
 
         public void Add_Task()
         {
@@ -72,6 +48,7 @@ namespace TaskFlow
 
             item.SubItems.Add(Form2.Task_Title.Trim());
             item.SubItems.Add(Form2.Task_Details.Trim());
+            item.SubItems[1].Font = new Font(Task_List.Font.Name, 17);
             item.SubItems.Add(Form2.Task_Start_Date.Trim());
             item.SubItems.Add(Form2.Task_Expire_Date.Trim());
 
@@ -104,7 +81,7 @@ namespace TaskFlow
 
                     //MessageBox.Show("Task(s) Removed Successfuly", "Action Performed");
 
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -116,9 +93,6 @@ namespace TaskFlow
 
             Check_items_Count();
         }
-
-
-        #endregion
 
         private void Create_Task()
         {
@@ -136,15 +110,32 @@ namespace TaskFlow
             }
         }
 
-        private void Create_New_Bt_Click(object sender, EventArgs e)
+        private void Check_items_Count()
         {
-            Filtering_Tasks_By_Task_Status(0);
-            Create_Task();
+            if (Task_List.Items.Count == 0)
+            {
+                No_Tasks_Mark_Label.Visible = true;
+            }
+            else
+            {
+                No_Tasks_Mark_Label.Visible = false;
+            }
+        }
+
+        private void Copy_TaskListItems_To_List()
+        {
+            if (All_Items.Count == 0)
+            {
+                foreach (ListViewItem item in Task_List.Items)
+                {
+                    All_Items.Add(item);
+                }
+            }
         }
 
         private void SelectImageForListViewIteam(string status)
         {
-            switch(status)
+            switch (status)
             {
                 case "Not Done Yet":
                     Task_List.SelectedItems[0].ImageIndex = 0;
@@ -158,16 +149,8 @@ namespace TaskFlow
             }
         }
 
-        private void Task_List_DoubleClick(object sender, EventArgs e)
+        private string GetTaskInfo()
         {
-            //Form4 Edit_Task_Status_Form = new Form4(Task_List.SelectedItems[0].Text);
-            //Edit_Task_Status_Form.ShowDialog();
-            //if (Edit_Task_Status_Form.Perform_Action)
-            //{
-            //    Task_List.SelectedItems[0].Text = Edit_Task_Status_Form.Task_Status;
-            //    SelectImageForListViewIteam(Task_List.SelectedItems[0].Text);
-            //}
-
             string Task_Status = Task_List.SelectedItems[0].Text;
             string Task_Title = Task_List.SelectedItems[0].SubItems[1].Text;
             string Task_Details = Task_List.SelectedItems[0].SubItems[2].Text;
@@ -180,74 +163,46 @@ namespace TaskFlow
             Task_info += "Task Starting Date :     " + Task_Starting_Date + "\n";
             Task_info += "Task_Expire_Date :       " + Task_Expire_Date;
 
-            string TaskInfo_title = "Task Info";
-
-            MessageBox.Show(Task_info, TaskInfo_title);
+            return Task_info;
         }
 
-        private void Remove_Task_Bt_Click(object sender, EventArgs e)
+        private void EditSelectedListViewItem()
         {
-            Remove_Task();
-        }
+            var selectedItem = Task_List.SelectedItems[0];
 
-        private void Creat_New_Task_BT_Click(object sender, EventArgs e)
-        {
-            Create_Task();
-        }
-
-
-        private void Edit_BT_Click(object sender, EventArgs e)
-        {
-            try
+            // Ensure the selected item has the required number of subitems
+            if (selectedItem.SubItems.Count >= 5)
             {
-                // Ensure at least one item is selected
-                if (Task_List.SelectedItems.Count > 0)
+                // Pass the subitem texts to the dialog
+                Form3 Edit_Item_Dialog = new Form3(
+                    selectedItem.SubItems[1].Text,
+                    selectedItem.SubItems[2].Text,
+                    selectedItem.SubItems[3].Text,
+                    selectedItem.SubItems[4].Text
+                );
+
+                Edit_Item_Dialog.ShowDialog(); // Ensure ShowDialog is used to wait for dialog result
+
+                // Check if the action should be performed after the dialog is closed
+                if (Edit_Item_Dialog.Performe_Action)
                 {
-                    var selectedItem = Task_List.SelectedItems[0];
 
-                    // Ensure the selected item has the required number of subitems
-                    if (selectedItem.SubItems.Count >= 5)
-                    {
-                        // Pass the subitem texts to the dialog
-                        Form3 Edit_Item_Dialog = new Form3(
-                            selectedItem.SubItems[1].Text,
-                            selectedItem.SubItems[2].Text,
-                            selectedItem.SubItems[3].Text,
-                            selectedItem.SubItems[4].Text
-                        );
-
-                        Edit_Item_Dialog.ShowDialog(); // Ensure ShowDialog is used to wait for dialog result
-
-                        // Check if the action should be performed after the dialog is closed
-                        if (Edit_Item_Dialog.Performe_Action)
-                        {
-
-                            // Update subitems with new values from the dialog
-                            selectedItem.SubItems[1].Text = Edit_Item_Dialog.New_Task_Title;
-                            selectedItem.SubItems[2].Text = Edit_Item_Dialog.New_Task_Details;
-                            selectedItem.SubItems[3].Text = Edit_Item_Dialog.New_Task_StartingDate;
-                            selectedItem.SubItems[4].Text = Edit_Item_Dialog.New_Task_ExpireDate;
-                        }
-
-                        // Optionally refresh the ListView (usually not needed)
-                        //Task_List.Refresh();
-
-                        //
-                        Current_Selected_Task_Status.Text = selectedItem.SubItems[1].Text;
-                    }
-                    else
-                    {
-                        MessageBox.Show("The selected item does not have enough subitems.");
-                    }
+                    // Update subitems with new values from the dialog
+                    selectedItem.SubItems[1].Text = Edit_Item_Dialog.New_Task_Title;
+                    selectedItem.SubItems[2].Text = Edit_Item_Dialog.New_Task_Details;
+                    selectedItem.SubItems[3].Text = Edit_Item_Dialog.New_Task_StartingDate;
+                    selectedItem.SubItems[4].Text = Edit_Item_Dialog.New_Task_ExpireDate;
                 }
-                else
-                {
-                    MessageBox.Show("No item is selected.");
-                }
+
+                // Optionally refresh the ListView (usually not needed)
+                //Task_List.Refresh();
+
+                //
+                Current_Selected_Task_Status.Text = selectedItem.SubItems[1].Text;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("The selected item does not have enough subitems.");
             }
         }
 
@@ -273,45 +228,8 @@ namespace TaskFlow
             }
         }
 
-        private void Task_List_SelectedIndexChanged(object sender, EventArgs e)
+        private void GenerateRandomItems()
         {
-            SelectedItemsCountChange();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-            Create_Task();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            Check_items_Count();
-        }
-
-        private void Change_To_Done_BT_Click(object sender, EventArgs e)
-        {
-            Task_List.SelectedItems[0].Text = "Completed";
-            Current_Selected_Task_Status.Text = "Completed";
-            Task_List.SelectedItems[0].ImageIndex = 1;
-        }
-
-        private void Change_To_NotDone_BT_Click(object sender, EventArgs e)
-        {
-            Task_List.SelectedItems[0].Text = "Not Done Yet";
-            Current_Selected_Task_Status.Text = "Not Done Yet";
-            Task_List.SelectedItems[0].ImageIndex = 0;
-        }
-
-        private void Change_To_Canceled_Bt_Click(object sender, EventArgs e)
-        {
-            Task_List.SelectedItems[0].Text = "Canceled";
-            Current_Selected_Task_Status.Text = "Canceled";
-            Task_List.SelectedItems[0].ImageIndex = 2;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Filtering_Tasks_By_Task_Status(0);
             for (int i = 0; i < 15; i++)
             {
                 ListViewItem item = new ListViewItem("Not Done Yet".Trim());
@@ -329,62 +247,38 @@ namespace TaskFlow
                 Console.WriteLine($"Task {i} Created ...!");
                 Check_items_Count();
 
-                
+
             }
         }
 
-
-        
-        int ButtonCkliked = 0;
-        private void Search_BT_Click(object sender, EventArgs e)
+        private void GetSerchedItems(string Task_Name)
         {
+            Copy_TaskListItems_To_List();
 
-            if (ButtonCkliked % 2 == 0)
+
+            if (string.IsNullOrEmpty(Task_Name))
             {
-                string Task_Name = Search_Text_Box.Text;
-                Copy_TaskListItems_To_List();
-
-
-                if (string.IsNullOrEmpty(Task_Name))
-                {
-                    Task_List.Items.Clear();
-                    Task_List.Items.AddRange(All_Items.ToArray());
-                    return;
-                }
-
-                var Search_items = All_Items.Where(item => item.SubItems[1].Text == Task_Name);
-                Task_List.Items.Clear();
-
-                if (Search_items.Count() == 0)
-                {
-                    MessageBox.Show($"No Task with {Task_Name} was Found...!");
-                    Task_List.Items.Clear();
-                    Task_List.Items.AddRange(All_Items.ToArray());
-                    return;
-                }
-
-                Task_List.Items.Clear();
-                Task_List.Items.AddRange(Search_items.ToArray());
-                Search_items = Clear;
-                ButtonCkliked++;
-                Search_BT.BackgroundImage = Properties.Resources._003_multiply;
-            }
-            else
-            {
-
-                Copy_TaskListItems_To_List();
                 Task_List.Items.Clear();
                 Task_List.Items.AddRange(All_Items.ToArray());
-                ButtonCkliked++;
-                Search_BT.BackgroundImage = Properties.Resources._004_find;
-
-                comboBox1.SelectedIndex = 0;
+                return;
             }
 
+            var Search_items = All_Items.Where(item => item.SubItems[1].Text == Task_Name);
+            Task_List.Items.Clear();
 
+            if (Search_items.Count() == 0)
+            {
+                MessageBox.Show($"No Task with {Task_Name} was Found...!");
+                Task_List.Items.Clear();
+                Task_List.Items.AddRange(All_Items.ToArray());
+                return;
+            }
+
+            Task_List.Items.Clear();
+            Task_List.Items.AddRange(Search_items.ToArray());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Reset_Task_List()
         {
             DialogResult Result = MessageBox.Show("Are You Sure That You want To Delete All Your Tasks ? ", "Confirmation.", MessageBoxButtons.YesNo, MessageBoxIcon.Hand);
             if (Result == DialogResult.Yes)
@@ -434,16 +328,11 @@ namespace TaskFlow
                 case 3:
                     var CanceledTAsk = All_Items.Where(item => item.Text == "Canceled");
                     Task_List.Items.AddRange(CanceledTAsk.ToArray());
-                    break;  
+                    break;
             }
 
         }
 
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Filtering_Tasks_By_Task_Status(comboBox1.SelectedIndex);
-        }
 
         private void GetStats()
         {
@@ -479,7 +368,6 @@ namespace TaskFlow
             CanceledTaskCount = CanceledTaskCounter;
         }
 
-
         private void Refresh_Stats()
         {
             GetStats(); // fill counters variables with values from all_items list
@@ -488,6 +376,141 @@ namespace TaskFlow
             Done_Task_Counter.Text = DoneTaskCount.ToString();
             NotDone_task_Counter.Text = NotDoneTaskCount.ToString();
             Canceled_Task_Counter.Text = CanceledTaskCount.ToString();
+        }
+
+        #endregion
+
+        #region Controls Event Functions
+
+        private void Show_Tasks_BT_Click(object sender, EventArgs e)
+        {
+            Show_Tasks_Panel.BringToFront();
+        }
+
+        private void Create_New_Bt_Click(object sender, EventArgs e)
+        {
+            Filtering_Tasks_By_Task_Status(0);
+            Create_Task();
+        }
+
+        private void Task_List_DoubleClick(object sender, EventArgs e)
+        {
+            // Editing The Task status Was Change From Form4 To The Main Form Side Bar....!
+            // Thiose are The Old Code And Form 4 is Still Included In The Project
+            //Form4 Edit_Task_Status_Form = new Form4(Task_List.SelectedItems[0].Text);
+            //Edit_Task_Status_Form.ShowDialog();
+            //if (Edit_Task_Status_Form.Perform_Action)
+            //{
+            //    Task_List.SelectedItems[0].Text = Edit_Task_Status_Form.Task_Status;
+            //    SelectImageForListViewIteam(Task_List.SelectedItems[0].Text);
+            //}
+
+            string TaskInfo_title = "Task Info";
+
+            MessageBox.Show(GetTaskInfo(), TaskInfo_title);
+        }
+
+        private void Remove_Task_Bt_Click(object sender, EventArgs e)
+        {
+            Remove_Task();
+        }
+
+        private void Creat_New_Task_BT_Click(object sender, EventArgs e)
+        {
+            Create_Task();
+        }
+
+        private void Edit_BT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Ensure at least one item is selected
+                if (Task_List.SelectedItems.Count > 0)
+                {
+                    EditSelectedListViewItem();
+                }
+                else
+                {
+                    MessageBox.Show("No item is selected.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void Task_List_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectedItemsCountChange();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Create_Task();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Check_items_Count();
+        }
+
+        private void Change_To_Done_BT_Click(object sender, EventArgs e)
+        {
+            Task_List.SelectedItems[0].Text = "Completed";
+            Current_Selected_Task_Status.Text = "Completed";
+            Task_List.SelectedItems[0].ImageIndex = 1;
+        }
+
+        private void Change_To_NotDone_BT_Click(object sender, EventArgs e)
+        {
+            Task_List.SelectedItems[0].Text = "Not Done Yet";
+            Current_Selected_Task_Status.Text = "Not Done Yet";
+            Task_List.SelectedItems[0].ImageIndex = 0;
+        }
+
+        private void Change_To_Canceled_Bt_Click(object sender, EventArgs e)
+        {
+            Task_List.SelectedItems[0].Text = "Canceled";
+            Current_Selected_Task_Status.Text = "Canceled";
+            Task_List.SelectedItems[0].ImageIndex = 2;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Filtering_Tasks_By_Task_Status(0);
+            GenerateRandomItems();
+        }
+
+        int ButtonCkliked = 0;
+        private void Search_BT_Click(object sender, EventArgs e)
+        {
+
+            if (ButtonCkliked % 2 == 0)
+            {
+                string Task_Name = Search_Text_Box.Text;
+                GetSerchedItems(Task_Name);
+                ButtonCkliked++;
+                Search_BT.BackgroundImage = Properties.Resources._003_multiply;
+            }
+            else
+            {
+
+                Copy_TaskListItems_To_List();
+                Task_List.Items.Clear();
+                Task_List.Items.AddRange(All_Items.ToArray());
+                ButtonCkliked++;
+                Search_BT.BackgroundImage = Properties.Resources._004_find;
+
+                comboBox1.SelectedIndex = 0;
+            }
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Reset_Task_List();
         }
 
         private void Stats_Refresh_BT_Click(object sender, EventArgs e)
@@ -529,5 +552,30 @@ namespace TaskFlow
         {
             Main_Panel.BringToFront();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Filtering_Tasks_By_Task_Status(comboBox1.SelectedIndex);
+        }
+
+        private void Reset_From_BT_Click(object sender, EventArgs e)
+        {
+            Reset_Task_List();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Application Type  : Windows Form\n" +
+                            "Frame Worck       : .NET 8\n" +
+                            "Language          : C# version 10\n" +
+                            "App Main Language : English USA\n" +
+                            @"Source Code       : www.github.com\mdelhajaji2000" +
+                            "IDE :             : \nVisual Studio Community Edition", "Application Info");
+        }
+
+        #endregion
+
+
     }
+
 }

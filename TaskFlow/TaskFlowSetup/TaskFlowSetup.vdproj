@@ -16,7 +16,7 @@
         "Entry"
         {
         "MsmKey" = "8:_3E77FD54040591C38707FC94388006EA"
-        "OwnerKey" = "8:_62E1E98394C144019BEC6492D3DED998"
+        "OwnerKey" = "8:_F7684081E75F4FDB81B939662697AE25"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -27,7 +27,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_62E1E98394C144019BEC6492D3DED998"
+        "MsmKey" = "8:_F7684081E75F4FDB81B939662697AE25"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -40,7 +40,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_62E1E98394C144019BEC6492D3DED998"
+        "OwnerKey" = "8:_F7684081E75F4FDB81B939662697AE25"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -61,6 +61,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -77,6 +85,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -334,7 +350,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0B6EFF293B464D599932D294EC288F43"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_41D8EC1E01D74894AD6601BDE33E321F"
             {
             "Name" = "8:Task Flow"
             "Arguments" = "8:"
@@ -342,13 +358,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_62E1E98394C144019BEC6492D3DED998"
+            "Target" = "8:_F7684081E75F4FDB81B939662697AE25"
             "Folder" = "8:_3B2C2E0BD0C24996B054F12893E21CE4"
             "WorkingFolder" = "8:_597557EECEA14E77B27DE6A44571B5C3"
             "Icon" = "8:_4A61F55714B448DBA730F98C32DBB14B"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C01E3013F625420684F0B847F848964A"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_60BFE1FC7AA348A0A69B1A2E1C970EF6"
             {
             "Name" = "8:Task Flow"
             "Arguments" = "8:"
@@ -356,7 +372,21 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_62E1E98394C144019BEC6492D3DED998"
+            "Target" = "8:_F7684081E75F4FDB81B939662697AE25"
+            "Folder" = "8:_597557EECEA14E77B27DE6A44571B5C3"
+            "WorkingFolder" = "8:_597557EECEA14E77B27DE6A44571B5C3"
+            "Icon" = "8:_4A61F55714B448DBA730F98C32DBB14B"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B006694D0C214B69A3D86363A6C54F54"
+            {
+            "Name" = "8:Task Flow"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_F7684081E75F4FDB81B939662697AE25"
             "Folder" = "8:_3225D64F79F440CDA8EC7F0503E9BA4B"
             "WorkingFolder" = "8:_597557EECEA14E77B27DE6A44571B5C3"
             "Icon" = "8:_4A61F55714B448DBA730F98C32DBB14B"
@@ -761,7 +791,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_62E1E98394C144019BEC6492D3DED998"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F7684081E75F4FDB81B939662697AE25"
             {
             "SourcePath" = "8:..\\obj\\Debug\\TaskFlow.exe"
             "TargetName" = "8:"

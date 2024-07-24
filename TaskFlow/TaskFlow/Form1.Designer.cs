@@ -38,6 +38,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.Stats_Refresh_BT = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.Canceled_Task_Counter = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -58,6 +60,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,6 +73,8 @@
             this.Search_Text_Box = new System.Windows.Forms.TextBox();
             this.Selected_Task_Name_Label = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.Search_BT = new System.Windows.Forms.Button();
+            this.Create_New_Bt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Mark_To_Select_TaskStatus_label = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -81,7 +86,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.Change_To_Canceled_Bt = new System.Windows.Forms.Button();
+            this.Change_To_NotDone_BT = new System.Windows.Forms.Button();
             this.Current_Selected_Task_Status = new System.Windows.Forms.Label();
+            this.Change_To_Done_BT = new System.Windows.Forms.Button();
+            this.Edit_BT = new System.Windows.Forms.Button();
+            this.Remove_Task_Bt = new System.Windows.Forms.Button();
             this.No_Tasks_Mark_Label = new System.Windows.Forms.Label();
             this.Task_List = new System.Windows.Forms.ListView();
             this.Task_Satus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -91,55 +101,47 @@
             this.Expired_Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.return_ToMain_BT = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.About_The_Devalloper_Panel = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.Stats_Refresh_BT = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Search_BT = new System.Windows.Forms.Button();
-            this.Create_New_Bt = new System.Windows.Forms.Button();
-            this.Change_To_Canceled_Bt = new System.Windows.Forms.Button();
-            this.Change_To_NotDone_BT = new System.Windows.Forms.Button();
-            this.Change_To_Done_BT = new System.Windows.Forms.Button();
-            this.Edit_BT = new System.Windows.Forms.Button();
-            this.Remove_Task_Bt = new System.Windows.Forms.Button();
-            this.return_ToMain_BT = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.Main_Panel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Show_Tasks_Panel.SuspendLayout();
             this.panel7.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Mark_To_Select_TaskStatus_label.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.About_The_Devalloper_Panel.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.About_The_Devalloper_Panel.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // Main_Panel
@@ -234,6 +236,28 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1412, 215);
             this.panel8.TabIndex = 12;
+            // 
+            // Stats_Refresh_BT
+            // 
+            this.Stats_Refresh_BT.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Stats_Refresh_BT.BackgroundImage = global::TaskFlow.Properties.Resources.loading_arrow;
+            this.Stats_Refresh_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Stats_Refresh_BT.Location = new System.Drawing.Point(672, 164);
+            this.Stats_Refresh_BT.Name = "Stats_Refresh_BT";
+            this.Stats_Refresh_BT.Size = new System.Drawing.Size(50, 44);
+            this.Stats_Refresh_BT.TabIndex = 5;
+            this.Stats_Refresh_BT.UseVisualStyleBackColor = false;
+            this.Stats_Refresh_BT.Click += new System.EventHandler(this.Stats_Refresh_BT_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::TaskFlow.Properties.Resources.stats;
+            this.pictureBox3.Location = new System.Drawing.Point(629, 58);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(134, 103);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // panel11
             // 
@@ -387,6 +411,7 @@
             this.Reset_From_BT.TabIndex = 10;
             this.Reset_From_BT.Text = "Reset From";
             this.Reset_From_BT.UseVisualStyleBackColor = true;
+            this.Reset_From_BT.Click += new System.EventHandler(this.Reset_From_BT_Click);
             // 
             // Show_Tasks_BT
             // 
@@ -445,6 +470,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1851, 100);
             this.panel2.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TaskFlow.Properties.Resources.task;
+            this.pictureBox1.Location = new System.Drawing.Point(653, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -586,6 +621,32 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Selected Task Title : ";
             // 
+            // Search_BT
+            // 
+            this.Search_BT.BackgroundImage = global::TaskFlow.Properties.Resources._004_find;
+            this.Search_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Search_BT.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.Search_BT.Location = new System.Drawing.Point(141, 61);
+            this.Search_BT.Name = "Search_BT";
+            this.Search_BT.Size = new System.Drawing.Size(35, 35);
+            this.Search_BT.TabIndex = 12;
+            this.Search_BT.UseVisualStyleBackColor = true;
+            this.Search_BT.Click += new System.EventHandler(this.Search_BT_Click);
+            // 
+            // Create_New_Bt
+            // 
+            this.Create_New_Bt.BackgroundImage = global::TaskFlow.Properties.Resources._002_add;
+            this.Create_New_Bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Create_New_Bt.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.Create_New_Bt.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Create_New_Bt.Location = new System.Drawing.Point(14, 5);
+            this.Create_New_Bt.Name = "Create_New_Bt";
+            this.Create_New_Bt.Size = new System.Drawing.Size(50, 50);
+            this.Create_New_Bt.TabIndex = 9;
+            this.Create_New_Bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Create_New_Bt.UseVisualStyleBackColor = true;
+            this.Create_New_Bt.Click += new System.EventHandler(this.Create_New_Bt_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.Mark_To_Select_TaskStatus_label);
@@ -706,6 +767,28 @@
             this.label8.Text = "Not Done yet";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Change_To_Canceled_Bt
+            // 
+            this.Change_To_Canceled_Bt.BackgroundImage = global::TaskFlow.Properties.Resources._008_cancelled;
+            this.Change_To_Canceled_Bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Change_To_Canceled_Bt.Location = new System.Drawing.Point(10, 229);
+            this.Change_To_Canceled_Bt.Name = "Change_To_Canceled_Bt";
+            this.Change_To_Canceled_Bt.Size = new System.Drawing.Size(70, 58);
+            this.Change_To_Canceled_Bt.TabIndex = 5;
+            this.Change_To_Canceled_Bt.UseVisualStyleBackColor = true;
+            this.Change_To_Canceled_Bt.Click += new System.EventHandler(this.Change_To_Canceled_Bt_Click);
+            // 
+            // Change_To_NotDone_BT
+            // 
+            this.Change_To_NotDone_BT.BackgroundImage = global::TaskFlow.Properties.Resources._002_time;
+            this.Change_To_NotDone_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Change_To_NotDone_BT.Location = new System.Drawing.Point(10, 165);
+            this.Change_To_NotDone_BT.Name = "Change_To_NotDone_BT";
+            this.Change_To_NotDone_BT.Size = new System.Drawing.Size(70, 58);
+            this.Change_To_NotDone_BT.TabIndex = 4;
+            this.Change_To_NotDone_BT.UseVisualStyleBackColor = true;
+            this.Change_To_NotDone_BT.Click += new System.EventHandler(this.Change_To_NotDone_BT_Click);
+            // 
             // Current_Selected_Task_Status
             // 
             this.Current_Selected_Task_Status.Font = new System.Drawing.Font("Trebuchet MS", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -715,6 +798,47 @@
             this.Current_Selected_Task_Status.TabIndex = 3;
             this.Current_Selected_Task_Status.Text = "Current Status";
             this.Current_Selected_Task_Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Change_To_Done_BT
+            // 
+            this.Change_To_Done_BT.BackgroundImage = global::TaskFlow.Properties.Resources._007_correct;
+            this.Change_To_Done_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Change_To_Done_BT.Location = new System.Drawing.Point(10, 98);
+            this.Change_To_Done_BT.Name = "Change_To_Done_BT";
+            this.Change_To_Done_BT.Size = new System.Drawing.Size(70, 58);
+            this.Change_To_Done_BT.TabIndex = 1;
+            this.Change_To_Done_BT.UseVisualStyleBackColor = true;
+            this.Change_To_Done_BT.Click += new System.EventHandler(this.Change_To_Done_BT_Click);
+            // 
+            // Edit_BT
+            // 
+            this.Edit_BT.BackgroundImage = global::TaskFlow.Properties.Resources._003_edit;
+            this.Edit_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Edit_BT.Enabled = false;
+            this.Edit_BT.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.Edit_BT.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.Edit_BT.Location = new System.Drawing.Point(70, 5);
+            this.Edit_BT.Name = "Edit_BT";
+            this.Edit_BT.Padding = new System.Windows.Forms.Padding(5);
+            this.Edit_BT.Size = new System.Drawing.Size(50, 50);
+            this.Edit_BT.TabIndex = 10;
+            this.Edit_BT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Edit_BT.UseVisualStyleBackColor = true;
+            this.Edit_BT.Click += new System.EventHandler(this.Edit_BT_Click);
+            // 
+            // Remove_Task_Bt
+            // 
+            this.Remove_Task_Bt.BackgroundImage = global::TaskFlow.Properties.Resources._001_remove_file;
+            this.Remove_Task_Bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Remove_Task_Bt.Enabled = false;
+            this.Remove_Task_Bt.Font = new System.Drawing.Font("Times New Roman", 15F);
+            this.Remove_Task_Bt.Location = new System.Drawing.Point(126, 5);
+            this.Remove_Task_Bt.Name = "Remove_Task_Bt";
+            this.Remove_Task_Bt.Size = new System.Drawing.Size(50, 50);
+            this.Remove_Task_Bt.TabIndex = 11;
+            this.Remove_Task_Bt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Remove_Task_Bt.UseVisualStyleBackColor = true;
+            this.Remove_Task_Bt.Click += new System.EventHandler(this.Remove_Task_Bt_Click);
             // 
             // No_Tasks_Mark_Label
             // 
@@ -790,6 +914,7 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.button9);
             this.panel6.Controls.Add(this.label18);
             this.panel6.Controls.Add(this.button1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -797,6 +922,15 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1851, 100);
             this.panel6.TabIndex = 1;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(94, 49);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(72, 42);
+            this.button9.TabIndex = 4;
+            this.button9.Text = "Fill Random";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -830,6 +964,20 @@
             this.panel5.Size = new System.Drawing.Size(1851, 100);
             this.panel5.TabIndex = 0;
             // 
+            // return_ToMain_BT
+            // 
+            this.return_ToMain_BT.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.return_ToMain_BT.BackgroundImage = global::TaskFlow.Properties.Resources.turn_back;
+            this.return_ToMain_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.return_ToMain_BT.FlatAppearance.BorderSize = 0;
+            this.return_ToMain_BT.Location = new System.Drawing.Point(1771, 11);
+            this.return_ToMain_BT.Margin = new System.Windows.Forms.Padding(0);
+            this.return_ToMain_BT.Name = "return_ToMain_BT";
+            this.return_ToMain_BT.Size = new System.Drawing.Size(67, 65);
+            this.return_ToMain_BT.TabIndex = 4;
+            this.return_ToMain_BT.UseVisualStyleBackColor = false;
+            this.return_ToMain_BT.Click += new System.EventHandler(this.return_ToMain_BT_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -839,6 +987,16 @@
             this.label6.Size = new System.Drawing.Size(271, 68);
             this.label6.TabIndex = 1;
             this.label6.Text = "Tasks List";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TaskFlow.Properties.Resources._005_task_1;
+            this.pictureBox2.Location = new System.Drawing.Point(745, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 77);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // About_The_Devalloper_Panel
             // 
@@ -854,6 +1012,112 @@
             this.About_The_Devalloper_Panel.Name = "About_The_Devalloper_Panel";
             this.About_The_Devalloper_Panel.Size = new System.Drawing.Size(1851, 834);
             this.About_The_Devalloper_Panel.TabIndex = 13;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::TaskFlow.Properties.Resources.github;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Location = new System.Drawing.Point(1507, 633);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(82, 77);
+            this.button6.TabIndex = 9;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::TaskFlow.Properties.Resources._001_gmail;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Location = new System.Drawing.Point(1301, 633);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(82, 77);
+            this.button5.TabIndex = 8;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::TaskFlow.Properties.Resources._003_feedback;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(1405, 635);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(82, 77);
+            this.button4.TabIndex = 7;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::TaskFlow.Properties.Resources._002_instagram;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(1198, 635);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(82, 77);
+            this.button3.TabIndex = 6;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label26
+            // 
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(210, 137);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(1389, 510);
+            this.label26.TabIndex = 5;
+            this.label26.Text = resources.GetString("label26.Text");
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel14.Controls.Add(this.button8);
+            this.panel14.Controls.Add(this.button7);
+            this.panel14.Controls.Add(this.label25);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(1851, 100);
+            this.panel14.TabIndex = 4;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button8.BackgroundImage = global::TaskFlow.Properties.Resources.information;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.Location = new System.Drawing.Point(1676, 11);
+            this.button8.Margin = new System.Windows.Forms.Padding(0);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(67, 65);
+            this.button8.TabIndex = 6;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button7.BackgroundImage = global::TaskFlow.Properties.Resources.turn_back;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.Location = new System.Drawing.Point(1761, 11);
+            this.button7.Margin = new System.Windows.Forms.Padding(0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(67, 65);
+            this.button7.TabIndex = 5;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Times New Roman", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(611, 8);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(601, 68);
+            this.label25.TabIndex = 3;
+            this.label25.Text = "About The Programmer";
             // 
             // panel13
             // 
@@ -875,251 +1139,17 @@
             this.label24.TabIndex = 3;
             this.label24.Text = "Beta V 1.1.08 By mdelhajaji2000";
             // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.button7);
-            this.panel14.Controls.Add(this.label25);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1851, 100);
-            this.panel14.TabIndex = 4;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Times New Roman", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(611, 8);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(601, 68);
-            this.label25.TabIndex = 3;
-            this.label25.Text = "About The Programmer";
-            // 
-            // label26
-            // 
-            this.label26.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(210, 137);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(1389, 510);
-            this.label26.TabIndex = 5;
-            this.label26.Text = resources.GetString("label26.Text");
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::TaskFlow.Properties.Resources._003_feedback;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(1405, 635);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(82, 77);
-            this.button4.TabIndex = 7;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::TaskFlow.Properties.Resources._001_gmail;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Location = new System.Drawing.Point(1301, 633);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(82, 77);
-            this.button5.TabIndex = 8;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::TaskFlow.Properties.Resources._002_instagram;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(1198, 635);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 77);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // Stats_Refresh_BT
-            // 
-            this.Stats_Refresh_BT.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Stats_Refresh_BT.BackgroundImage = global::TaskFlow.Properties.Resources.loading_arrow;
-            this.Stats_Refresh_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Stats_Refresh_BT.Location = new System.Drawing.Point(672, 164);
-            this.Stats_Refresh_BT.Name = "Stats_Refresh_BT";
-            this.Stats_Refresh_BT.Size = new System.Drawing.Size(50, 44);
-            this.Stats_Refresh_BT.TabIndex = 5;
-            this.Stats_Refresh_BT.UseVisualStyleBackColor = false;
-            this.Stats_Refresh_BT.Click += new System.EventHandler(this.Stats_Refresh_BT_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::TaskFlow.Properties.Resources.stats;
-            this.pictureBox3.Location = new System.Drawing.Point(629, 58);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(134, 103);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TaskFlow.Properties.Resources.task;
-            this.pictureBox1.Location = new System.Drawing.Point(653, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Search_BT
-            // 
-            this.Search_BT.BackgroundImage = global::TaskFlow.Properties.Resources._004_find;
-            this.Search_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Search_BT.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.Search_BT.Location = new System.Drawing.Point(141, 61);
-            this.Search_BT.Name = "Search_BT";
-            this.Search_BT.Size = new System.Drawing.Size(35, 35);
-            this.Search_BT.TabIndex = 12;
-            this.Search_BT.UseVisualStyleBackColor = true;
-            this.Search_BT.Click += new System.EventHandler(this.Search_BT_Click);
-            // 
-            // Create_New_Bt
-            // 
-            this.Create_New_Bt.BackgroundImage = global::TaskFlow.Properties.Resources._002_add;
-            this.Create_New_Bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Create_New_Bt.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.Create_New_Bt.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Create_New_Bt.Location = new System.Drawing.Point(14, 5);
-            this.Create_New_Bt.Name = "Create_New_Bt";
-            this.Create_New_Bt.Size = new System.Drawing.Size(50, 50);
-            this.Create_New_Bt.TabIndex = 9;
-            this.Create_New_Bt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Create_New_Bt.UseVisualStyleBackColor = true;
-            this.Create_New_Bt.Click += new System.EventHandler(this.Create_New_Bt_Click);
-            // 
-            // Change_To_Canceled_Bt
-            // 
-            this.Change_To_Canceled_Bt.BackgroundImage = global::TaskFlow.Properties.Resources._008_cancelled;
-            this.Change_To_Canceled_Bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Change_To_Canceled_Bt.Location = new System.Drawing.Point(10, 229);
-            this.Change_To_Canceled_Bt.Name = "Change_To_Canceled_Bt";
-            this.Change_To_Canceled_Bt.Size = new System.Drawing.Size(70, 58);
-            this.Change_To_Canceled_Bt.TabIndex = 5;
-            this.Change_To_Canceled_Bt.UseVisualStyleBackColor = true;
-            this.Change_To_Canceled_Bt.Click += new System.EventHandler(this.Change_To_Canceled_Bt_Click);
-            // 
-            // Change_To_NotDone_BT
-            // 
-            this.Change_To_NotDone_BT.BackgroundImage = global::TaskFlow.Properties.Resources._002_time;
-            this.Change_To_NotDone_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Change_To_NotDone_BT.Location = new System.Drawing.Point(10, 165);
-            this.Change_To_NotDone_BT.Name = "Change_To_NotDone_BT";
-            this.Change_To_NotDone_BT.Size = new System.Drawing.Size(70, 58);
-            this.Change_To_NotDone_BT.TabIndex = 4;
-            this.Change_To_NotDone_BT.UseVisualStyleBackColor = true;
-            this.Change_To_NotDone_BT.Click += new System.EventHandler(this.Change_To_NotDone_BT_Click);
-            // 
-            // Change_To_Done_BT
-            // 
-            this.Change_To_Done_BT.BackgroundImage = global::TaskFlow.Properties.Resources._007_correct;
-            this.Change_To_Done_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Change_To_Done_BT.Location = new System.Drawing.Point(10, 98);
-            this.Change_To_Done_BT.Name = "Change_To_Done_BT";
-            this.Change_To_Done_BT.Size = new System.Drawing.Size(70, 58);
-            this.Change_To_Done_BT.TabIndex = 1;
-            this.Change_To_Done_BT.UseVisualStyleBackColor = true;
-            this.Change_To_Done_BT.Click += new System.EventHandler(this.Change_To_Done_BT_Click);
-            // 
-            // Edit_BT
-            // 
-            this.Edit_BT.BackgroundImage = global::TaskFlow.Properties.Resources._003_edit;
-            this.Edit_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Edit_BT.Enabled = false;
-            this.Edit_BT.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.Edit_BT.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.Edit_BT.Location = new System.Drawing.Point(70, 5);
-            this.Edit_BT.Name = "Edit_BT";
-            this.Edit_BT.Padding = new System.Windows.Forms.Padding(5);
-            this.Edit_BT.Size = new System.Drawing.Size(50, 50);
-            this.Edit_BT.TabIndex = 10;
-            this.Edit_BT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Edit_BT.UseVisualStyleBackColor = true;
-            this.Edit_BT.Click += new System.EventHandler(this.Edit_BT_Click);
-            // 
-            // Remove_Task_Bt
-            // 
-            this.Remove_Task_Bt.BackgroundImage = global::TaskFlow.Properties.Resources._001_remove_file;
-            this.Remove_Task_Bt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Remove_Task_Bt.Enabled = false;
-            this.Remove_Task_Bt.Font = new System.Drawing.Font("Times New Roman", 15F);
-            this.Remove_Task_Bt.Location = new System.Drawing.Point(126, 5);
-            this.Remove_Task_Bt.Name = "Remove_Task_Bt";
-            this.Remove_Task_Bt.Size = new System.Drawing.Size(50, 50);
-            this.Remove_Task_Bt.TabIndex = 11;
-            this.Remove_Task_Bt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Remove_Task_Bt.UseVisualStyleBackColor = true;
-            this.Remove_Task_Bt.Click += new System.EventHandler(this.Remove_Task_Bt_Click);
-            // 
-            // return_ToMain_BT
-            // 
-            this.return_ToMain_BT.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.return_ToMain_BT.BackgroundImage = global::TaskFlow.Properties.Resources.turn_back;
-            this.return_ToMain_BT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.return_ToMain_BT.FlatAppearance.BorderSize = 0;
-            this.return_ToMain_BT.Location = new System.Drawing.Point(1771, 11);
-            this.return_ToMain_BT.Margin = new System.Windows.Forms.Padding(0);
-            this.return_ToMain_BT.Name = "return_ToMain_BT";
-            this.return_ToMain_BT.Size = new System.Drawing.Size(67, 65);
-            this.return_ToMain_BT.TabIndex = 4;
-            this.return_ToMain_BT.UseVisualStyleBackColor = false;
-            this.return_ToMain_BT.Click += new System.EventHandler(this.return_ToMain_BT_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TaskFlow.Properties.Resources._005_task_1;
-            this.pictureBox2.Location = new System.Drawing.Point(745, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 77);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::TaskFlow.Properties.Resources.github;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Location = new System.Drawing.Point(1507, 633);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(82, 77);
-            this.button6.TabIndex = 9;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button7.BackgroundImage = global::TaskFlow.Properties.Resources.turn_back;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.Location = new System.Drawing.Point(1761, 11);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(67, 65);
-            this.button7.TabIndex = 5;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1851, 834);
-            this.Controls.Add(this.About_The_Devalloper_Panel);
             this.Controls.Add(this.Show_Tasks_Panel);
+            this.Controls.Add(this.About_The_Devalloper_Panel);
             this.Controls.Add(this.Main_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Task Flow";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1130,6 +1160,7 @@
             this.panel4.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -1142,6 +1173,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Show_Tasks_Panel.ResumeLayout(false);
             this.Show_Tasks_Panel.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -1153,14 +1185,12 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.About_The_Devalloper_Panel.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1255,6 +1285,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
 

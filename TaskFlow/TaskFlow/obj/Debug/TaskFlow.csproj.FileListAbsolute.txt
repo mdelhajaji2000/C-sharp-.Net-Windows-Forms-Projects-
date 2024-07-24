@@ -24,3 +24,12 @@ C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms
 C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.csproj.CoreCompileInputs.cache
 C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.exe
 C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.pdb
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\ComponentFactory.Krypton.Docking.dll
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\ComponentFactory.Krypton.Docking.pdb
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\ComponentFactory.Krypton.Workspace.pdb
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\ComponentFactory.Krypton.Navigator.pdb
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+C:\Users\mdelh\OneDrive\Desktop\My-Full-Real-Projects\C-sharp-.Net-Windows-Forms-Projects-\TaskFlow\TaskFlow\obj\Debug\TaskFlow.csproj.Up2Date
