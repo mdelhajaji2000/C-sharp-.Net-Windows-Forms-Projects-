@@ -67,6 +67,8 @@
             this.Main_Title_Label = new System.Windows.Forms.Label();
             this.Show_Tasks_Panel = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.Mark_To_Select_TaskStatus_label = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -76,8 +78,6 @@
             this.Search_BT = new System.Windows.Forms.Button();
             this.Create_New_Bt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Mark_To_Select_TaskStatus_label = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -99,6 +99,16 @@
             this.Task_Details = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Start_Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Expired_Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TaskListItems_ContextMenueStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.changeTaskStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comletedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notDoneYetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.canceledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editTaskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.formatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -134,8 +144,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Show_Tasks_Panel.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.Mark_To_Select_TaskStatus_label.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.TaskListItems_ContextMenueStrip.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -536,6 +547,7 @@
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.Mark_To_Select_TaskStatus_label);
             this.panel7.Controls.Add(this.label17);
             this.panel7.Controls.Add(this.comboBox1);
             this.panel7.Controls.Add(this.button2);
@@ -552,6 +564,25 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(191, 634);
             this.panel7.TabIndex = 16;
+            // 
+            // Mark_To_Select_TaskStatus_label
+            // 
+            this.Mark_To_Select_TaskStatus_label.Controls.Add(this.label15);
+            this.Mark_To_Select_TaskStatus_label.Location = new System.Drawing.Point(3, 317);
+            this.Mark_To_Select_TaskStatus_label.Name = "Mark_To_Select_TaskStatus_label";
+            this.Mark_To_Select_TaskStatus_label.Size = new System.Drawing.Size(179, 343);
+            this.Mark_To_Select_TaskStatus_label.TabIndex = 14;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label15.Location = new System.Drawing.Point(17, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(139, 299);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Select A Task From Task Status To Change it Here";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label17
             // 
@@ -649,7 +680,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.Mark_To_Select_TaskStatus_label);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
@@ -669,25 +699,6 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit Task Status";
-            // 
-            // Mark_To_Select_TaskStatus_label
-            // 
-            this.Mark_To_Select_TaskStatus_label.Controls.Add(this.label15);
-            this.Mark_To_Select_TaskStatus_label.Location = new System.Drawing.Point(0, 0);
-            this.Mark_To_Select_TaskStatus_label.Name = "Mark_To_Select_TaskStatus_label";
-            this.Mark_To_Select_TaskStatus_label.Size = new System.Drawing.Size(179, 343);
-            this.Mark_To_Select_TaskStatus_label.TabIndex = 14;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label15.Location = new System.Drawing.Point(17, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(139, 299);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Select A Task From Task Status To Change it Here";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
@@ -863,6 +874,7 @@
             this.Task_Details,
             this.Start_Date,
             this.Expired_Date});
+            this.Task_List.ContextMenuStrip = this.TaskListItems_ContextMenueStrip;
             this.Task_List.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.234F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Task_List.HideSelection = false;
             this.Task_List.Location = new System.Drawing.Point(191, 100);
@@ -901,6 +913,95 @@
             // 
             this.Expired_Date.Text = "Expire Date";
             this.Expired_Date.Width = 164;
+            // 
+            // TaskListItems_ContextMenueStrip
+            // 
+            this.TaskListItems_ContextMenueStrip.Font = new System.Drawing.Font("Segoe UI", 17F);
+            this.TaskListItems_ContextMenueStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changeTaskStatusToolStripMenuItem,
+            this.deleteTaskToolStripMenuItem,
+            this.editTaskToolStripMenuItem,
+            this.showDetailsToolStripMenuItem});
+            this.TaskListItems_ContextMenueStrip.Name = "contextMenuStrip1";
+            this.TaskListItems_ContextMenueStrip.Size = new System.Drawing.Size(283, 148);
+            this.TaskListItems_ContextMenueStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // changeTaskStatusToolStripMenuItem
+            // 
+            this.changeTaskStatusToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.comletedToolStripMenuItem,
+            this.notDoneYetToolStripMenuItem,
+            this.canceledToolStripMenuItem});
+            this.changeTaskStatusToolStripMenuItem.Image = global::TaskFlow.Properties.Resources._001_filter;
+            this.changeTaskStatusToolStripMenuItem.Name = "changeTaskStatusToolStripMenuItem";
+            this.changeTaskStatusToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
+            this.changeTaskStatusToolStripMenuItem.Text = "Change Task Status";
+            // 
+            // comletedToolStripMenuItem
+            // 
+            this.comletedToolStripMenuItem.Image = global::TaskFlow.Properties.Resources._007_correct;
+            this.comletedToolStripMenuItem.Name = "comletedToolStripMenuItem";
+            this.comletedToolStripMenuItem.Size = new System.Drawing.Size(223, 36);
+            this.comletedToolStripMenuItem.Text = "Comleted";
+            this.comletedToolStripMenuItem.Click += new System.EventHandler(this.comletedToolStripMenuItem_Click);
+            // 
+            // notDoneYetToolStripMenuItem
+            // 
+            this.notDoneYetToolStripMenuItem.Image = global::TaskFlow.Properties.Resources._002_time;
+            this.notDoneYetToolStripMenuItem.Name = "notDoneYetToolStripMenuItem";
+            this.notDoneYetToolStripMenuItem.Size = new System.Drawing.Size(223, 36);
+            this.notDoneYetToolStripMenuItem.Text = "Not Done Yet";
+            this.notDoneYetToolStripMenuItem.Click += new System.EventHandler(this.notDoneYetToolStripMenuItem_Click);
+            // 
+            // canceledToolStripMenuItem
+            // 
+            this.canceledToolStripMenuItem.Image = global::TaskFlow.Properties.Resources._008_cancelled;
+            this.canceledToolStripMenuItem.Name = "canceledToolStripMenuItem";
+            this.canceledToolStripMenuItem.Size = new System.Drawing.Size(223, 36);
+            this.canceledToolStripMenuItem.Text = "Canceled";
+            this.canceledToolStripMenuItem.Click += new System.EventHandler(this.canceledToolStripMenuItem_Click);
+            // 
+            // deleteTaskToolStripMenuItem
+            // 
+            this.deleteTaskToolStripMenuItem.Image = global::TaskFlow.Properties.Resources._001_remove_file;
+            this.deleteTaskToolStripMenuItem.Name = "deleteTaskToolStripMenuItem";
+            this.deleteTaskToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
+            this.deleteTaskToolStripMenuItem.Text = "Delete Task";
+            this.deleteTaskToolStripMenuItem.Click += new System.EventHandler(this.deleteTaskToolStripMenuItem_Click);
+            // 
+            // editTaskToolStripMenuItem
+            // 
+            this.editTaskToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contentToolStripMenuItem,
+            this.formatToolStripMenuItem});
+            this.editTaskToolStripMenuItem.Image = global::TaskFlow.Properties.Resources._003_edit;
+            this.editTaskToolStripMenuItem.Name = "editTaskToolStripMenuItem";
+            this.editTaskToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
+            this.editTaskToolStripMenuItem.Text = "Edit Task";
+            // 
+            // contentToolStripMenuItem
+            // 
+            this.contentToolStripMenuItem.Image = global::TaskFlow.Properties.Resources._001_content;
+            this.contentToolStripMenuItem.Name = "contentToolStripMenuItem";
+            this.contentToolStripMenuItem.Size = new System.Drawing.Size(169, 36);
+            this.contentToolStripMenuItem.Text = "Content";
+            this.contentToolStripMenuItem.Click += new System.EventHandler(this.contentToolStripMenuItem_Click);
+            // 
+            // formatToolStripMenuItem
+            // 
+            this.formatToolStripMenuItem.Image = global::TaskFlow.Properties.Resources._002_font;
+            this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
+            this.formatToolStripMenuItem.Size = new System.Drawing.Size(169, 36);
+            this.formatToolStripMenuItem.Text = "Format";
+            this.formatToolStripMenuItem.Click += new System.EventHandler(this.formatToolStripMenuItem_Click);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Image = global::TaskFlow.Properties.Resources.detail;
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(282, 36);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
             // 
             // imageList1
             // 
@@ -982,6 +1083,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(832, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(271, 68);
@@ -1146,8 +1248,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1851, 834);
             this.Controls.Add(this.Show_Tasks_Panel);
-            this.Controls.Add(this.About_The_Devalloper_Panel);
             this.Controls.Add(this.Main_Panel);
+            this.Controls.Add(this.About_The_Devalloper_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -1178,9 +1280,10 @@
             this.Show_Tasks_Panel.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.Mark_To_Select_TaskStatus_label.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.Mark_To_Select_TaskStatus_label.ResumeLayout(false);
+            this.TaskListItems_ContextMenueStrip.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1209,13 +1312,6 @@
         private System.Windows.Forms.Button Show_Tasks_BT;
         private System.Windows.Forms.Button Creat_New_Task_BT;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Main_Title_Label;
         private System.Windows.Forms.Panel Show_Tasks_Panel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
@@ -1287,6 +1383,23 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ContextMenuStrip TaskListItems_ContextMenueStrip;
+        private System.Windows.Forms.ToolStripMenuItem changeTaskStatusToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comletedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem notDoneYetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem canceledToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteTaskToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editTaskToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem formatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Main_Title_Label;
     }
 }
 

@@ -385,6 +385,27 @@ namespace TaskFlow
             Canceled_Task_Counter.Text = CanceledTaskCount.ToString();
         }
 
+        private void ChangeTaskStatusToDone()
+        {
+            Task_List.SelectedItems[0].Text = "Completed";
+            Current_Selected_Task_Status.Text = "Completed";
+            Task_List.SelectedItems[0].ImageIndex = 1;
+        }
+
+        private void ChangeTaskStatusToNotDoneYet()
+        {
+            Task_List.SelectedItems[0].Text = "Not Done Yet";
+            Current_Selected_Task_Status.Text = "Not Done Yet";
+            Task_List.SelectedItems[0].ImageIndex = 0;
+        }
+
+        private void ChangeTaskStatusToCanceled()
+        {
+            Task_List.SelectedItems[0].Text = "Canceled";
+            Current_Selected_Task_Status.Text = "Canceled";
+            Task_List.SelectedItems[0].ImageIndex = 2;
+        }
+
         #endregion
 
         #region Controls Event Functions
@@ -462,25 +483,21 @@ namespace TaskFlow
             Check_items_Count();
         }
 
+
+
         private void Change_To_Done_BT_Click(object sender, EventArgs e)
         {
-            Task_List.SelectedItems[0].Text = "Completed";
-            Current_Selected_Task_Status.Text = "Completed";
-            Task_List.SelectedItems[0].ImageIndex = 1;
+            ChangeTaskStatusToDone();
         }
 
         private void Change_To_NotDone_BT_Click(object sender, EventArgs e)
         {
-            Task_List.SelectedItems[0].Text = "Not Done Yet";
-            Current_Selected_Task_Status.Text = "Not Done Yet";
-            Task_List.SelectedItems[0].ImageIndex = 0;
+            ChangeTaskStatusToNotDoneYet();
         }
 
         private void Change_To_Canceled_Bt_Click(object sender, EventArgs e)
         {
-            Task_List.SelectedItems[0].Text = "Canceled";
-            Current_Selected_Task_Status.Text = "Canceled";
-            Task_List.SelectedItems[0].ImageIndex = 2;
+            ChangeTaskStatusToCanceled();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -580,9 +597,52 @@ namespace TaskFlow
                             "IDE :             : \nVisual Studio Community Edition", "Application Info");
         }
 
+        private void deleteTaskToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Remove_Task();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            if (Task_List.SelectedItems.Count == 0)
+            {
+                TaskListItems_ContextMenueStrip.Enabled = false;
+            }
+            else
+            {
+                TaskListItems_ContextMenueStrip.Enabled = true;
+            }
+        }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(GetTaskInfo(), "Task Info");
+        }
+
+        private void comletedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeTaskStatusToDone();
+        }
+
+        private void notDoneYetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeTaskStatusToNotDoneYet();
+        }
+
+        private void canceledToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeTaskStatusToCanceled();
+        }
+        private void contentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditSelectedListViewItem();
+        }
+        private void formatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Feature isnt Complete Yet...!","Propertie Not Found");
+        }
+
         #endregion
-
-
     }
 
 }

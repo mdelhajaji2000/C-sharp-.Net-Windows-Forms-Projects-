@@ -63,6 +63,16 @@ namespace TaskFlow.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _001_content {
+            get {
+                object obj = ResourceManager.GetObject("001-content", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _001_database {
             get {
                 object obj = ResourceManager.GetObject("001-database", resourceCulture);
@@ -136,6 +146,16 @@ namespace TaskFlow.Properties {
         internal static System.Drawing.Bitmap _002_add {
             get {
                 object obj = ResourceManager.GetObject("002-add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _002_font {
+            get {
+                object obj = ResourceManager.GetObject("002-font", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +266,27 @@ namespace TaskFlow.Properties {
         internal static System.Drawing.Bitmap _008_cancelled {
             get {
                 object obj = ResourceManager.GetObject("008-cancelled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blue_dynamic_shape_abstract_background_suitable_for_web_and_mobile_app_backgrounds_eps_10_vector {
+            get {
+                object obj = ResourceManager.GetObject("blue-dynamic-shape-abstract-background-suitable-for-web-and-mobile-app-background" +
+                        "s-eps-10-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap detail {
+            get {
+                object obj = ResourceManager.GetObject("detail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
